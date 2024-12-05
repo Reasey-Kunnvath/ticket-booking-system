@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #00B98E;
-    --secondary: #FF6922;
+    --primary: #8C54FD;
+    --secondary: #FF9B9B;
     --light: #EFFDF5;
     --dark: #0E2E50;
 }
@@ -149,7 +149,7 @@
         opacity: 0;
         visibility: hidden;
         transition: .5s;
-        
+
     }
 
     .navbar .nav-item:hover .dropdown-menu {
