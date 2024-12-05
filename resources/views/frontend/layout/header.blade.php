@@ -4,9 +4,9 @@
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
                 <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/icon-deal.png" alt="Icon" style="width: 30px; height: 30px;">
+                        <img class="img-fluid" src={{asset("frontend/assets/img/icon-deal.png")}} alt="Icon" style="width: 30px; height: 30px;">
                     </div>
-                    <h1 class="m-0 text-primary">Makaan</h1>
+                    <h1 class="m-0 text-primary">OG</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -16,11 +16,11 @@
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Property List</a>
-                                <a href="property-type.html" class="dropdown-item">Property Type</a>
-                                <a href="property-agent.html" class="dropdown-item">Property Agent</a>
+                                <a href="property-list.html" class="dropdown-item">Concerts</a>
+                                <a href="property-type.html" class="dropdown-item">Conferences</a>
+                                <a href="property-agent.html" class="dropdown-item">Sports</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -32,8 +32,14 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Add Property</a>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Sell Your Tickets</a>
+
                 </div>
+                <a href="#" class="nav-item nav-link d-flex align-items-center">
+                    <div class="p-2 me-2">
+                        <img class="img-fluid" src={{asset("frontend/assets/img/userprofile.png")}} alt="Icon" style="width: 50px; height: 50px;">
+                    </div>
+                </a>
             </nav>
         </div>
 <!-- Navbar End -->
