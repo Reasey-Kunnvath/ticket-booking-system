@@ -1,7 +1,5 @@
 <?php $__env->startSection('title','Admin'); ?>
-
 <?php $__env->startSection('content'); ?>
-
 <?php $__env->stopSection(); ?>
 
 
