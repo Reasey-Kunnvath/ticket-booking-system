@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\backendcontoller;
+use App\Http\Controllers\backend\BackendController;
 # For Frontend
 Route::get('/', function () {
     return view("frontend.home.index");
@@ -10,6 +10,5 @@ Route::get('/', function () {
 
 
 # For Backend
-
-Route::get('/admin', [backendcontoller::class, 'backendindex'])->name('admin');
+Route::get('/admin', [BackendController::class, 'backendindex'])->name('admin');
 

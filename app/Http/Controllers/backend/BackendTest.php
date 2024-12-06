@@ -7,5 +7,10 @@ use Illuminate\Http\Request;
 
 class BackendTest extends Controller
 {
-    //hello
+    public function backendindex(){
+
+        return view('backend.backIndex');
+
+
+}
 }
