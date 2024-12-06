@@ -2,11 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\BackendController;
-# For Frontend
-Route::get('/', function () {
-    return view("frontend.home.index");
-});
+use App\Http\Controllers\frontend\FrontendController;
 
+# For Frontend
+Route::get('/home', [FrontendController::class, 'frontendindex'])->name('home');
 
 
 # For Backend
