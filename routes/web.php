@@ -10,4 +10,6 @@ Route::get('/home', [FrontendController::class, 'frontendindex'])->name('home');
 
 # For Backend
 Route::get('/admin', [BackendController::class, 'backendindex'])->name('admin');
+Route::get('/dashboard', [BackendController::class, 'dashboard'])->name('dashboard');
+
 
