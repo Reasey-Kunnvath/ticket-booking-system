@@ -3,9 +3,22 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\BackendController;
 use App\Http\Controllers\frontend\FrontendController;
+use App\Http\Controllers\frontend\AllEventController;
+use App\Http\Controllers\frontend\ConcertController;
 
 # For Frontend
-Route::get('/home', [FrontendController::class, 'frontendindex'])->name('home');
+Route::controller(FrontendController::class)->group(function(){
+    Route::get('/home','frontendindex')->name('Home');
+});
+
+Route::controller(AllEventController::class)->group(function(){
+    Route::get('/all-event','AllEventindex')->name('All-Events');
+});
+
+Route::controller(ConcertController::class)->group(function(){
+    Route::get('/concert','ConcertIndex')->name('Concert');
+});
+
 
 
 # For Backend

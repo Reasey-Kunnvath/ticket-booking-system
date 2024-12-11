@@ -2715,6 +2715,7 @@ Did you mean one of these?
 #26 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #27 {main}
 "} 
+<<<<<<< HEAD
 [2024-12-11 12:12:58] local.ERROR: View [backend.dashbarod.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.dashbarod.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('backend.dashbar...', Array)
@@ -2989,4 +2990,20 @@ Did you mean one of these?
 #49 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #50 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #51 {main}
+=======
+[2024-12-11 12:45:54] local.ERROR: Too many arguments to "make:view" command, expected arguments "name". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments to \"make:view\" command, expected arguments \"name\". at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php:199)
+[stacktrace]
+#0 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php(92): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument()
+#1 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php(77): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken()
+#2 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\Input.php(53): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Command\\Command.php(238): Symfony\\Component\\Console\\Input\\Input->bind()
+#4 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#5 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run()
+#6 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
+#7 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun()
+#8 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#9 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1205): Illuminate\\Foundation\\Console\\Kernel->handle()
+#10 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#11 {main}
+>>>>>>> 7735c6cbe2163cccf7161c1bea328af57e933b3e
 "} 
