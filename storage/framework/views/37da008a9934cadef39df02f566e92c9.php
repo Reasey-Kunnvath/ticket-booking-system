@@ -13,13 +13,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="<?php echo e(url('/home')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Home') ? 'active' : ''); ?>">Home</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+                            <a href="<?php echo e(url('/all-event')); ?>" class="nav-link dropdown-toggle <?php echo e(request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : ''); ?>" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Concerts</a>
-                                <a href="property-type.html" class="dropdown-item">Conferences</a>
-                                <a href="property-agent.html" class="dropdown-item">Sports</a>
+                                <a href="<?php echo e(url('/all-event')); ?>" class="dropdown-item <?php echo e(request()->routeIs('All-Events') ? 'active' : ''); ?>">All Events</a>
+                                <a href="<?php echo e(url('/concert')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Concert') ? 'active' : ''); ?>">Concerts</a>
+                                <a href="<?php echo e(url('')); ?>" class="dropdown-item">Conferences</a>
+                                <a href="<?php echo e(url('')); ?>" class="dropdown-item">Sports</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
