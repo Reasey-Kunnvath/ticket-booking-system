@@ -11,4 +11,8 @@ class BackendController extends Controller
 
         return view('backend.backIndex');
     }
+    public function dashboard()
+    {
+        return view('backend.dashboard');
+    }
 }
