@@ -3,17 +3,26 @@
 use Illuminate\Support\Facades\Route;
 #BackEnd
 use App\Http\Controllers\backend\BackendController;
+<<<<<<< HEAD
 use App\Http\Controllers\backend\TicketManager\SellingRequest;
 
 
 #FrontEnd
+=======
+
+#Frontend Import
+>>>>>>> e43bae5dc828b5138c407584ca52a763609f1079
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\frontend\AllEventController;
 use App\Http\Controllers\frontend\ConcertController;
+use App\Http\Controllers\frontend\ConferenceController;
+use App\Http\Controllers\frontend\SportController;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\HelpController;
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
-    Route::get('/home','frontendindex')->name('Home');
+    Route::get('/','frontendindex')->name('Home');
 });
 
 Route::controller(AllEventController::class)->group(function(){
@@ -24,6 +33,21 @@ Route::controller(ConcertController::class)->group(function(){
     Route::get('/concert','ConcertIndex')->name('Concert');
 });
 
+Route::controller(ConferenceController::class)->group(function(){
+    Route::get('/conference','ConferenceIndex')->name('Conference');
+});
+
+Route::controller(SportController::class)->group(function(){
+    Route::get('/sport','SportIndex')->name('Sport');
+});
+
+Route::controller(AboutController::class)->group(function(){
+    Route::get('/about','AboutIndex')->name('About');
+});
+
+Route::controller(HelpController::class)->group(function(){
+    Route::get('/help-center','HelpCenterIndex')->name('Help-Center');
+});
 
 
 # For Backend

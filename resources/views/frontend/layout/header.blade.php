@@ -13,26 +13,19 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="{{url('/home')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
+                        <a href="{{url('/')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
                         <div class="nav-item dropdown">
                             <a href="{{url('/all-event')}}" class="nav-link dropdown-toggle {{ request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : '' }}" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="{{url('/all-event')}}" class="dropdown-item {{ request()->routeIs('All-Events') ? 'active' : '' }}">All Events</a>
                                 <a href="{{url('/concert')}}" class="dropdown-item {{ request()->routeIs('Concert') ? 'active' : '' }}">Concerts</a>
-                                <a href="{{url('')}}" class="dropdown-item">Conferences</a>
-                                <a href="{{url('')}}" class="dropdown-item">Sports</a>
+                                <a href="{{url('/conference')}}" class="dropdown-item {{ request()->routeIs('Conference') ? 'active' : '' }}">Conferences</a>
+                                <a href="{{url('/sport')}}" class="dropdown-item {{ request()->routeIs('Sport') ? 'active' : '' }}">Sports</a>
                             </div>
                         </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Error</a>
-                            </div>
-                        </div>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="{{url('/about')}}" class="nav-item nav-link {{ request()->routeIs('About') ? 'active' : '' }}">About</a>
 
-                        <a href="contact.html" class="nav-item nav-link">Help Center</a>
+                        <a href="{{url('/help-center')}}" class="nav-item nav-link {{ request()->routeIs('Help-Center') ? 'active' : '' }}">Help Center</a>
 
                         <a href="" class="nav-item nav-link align-items-center" >Cart <i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
                     </div>
