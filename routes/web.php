@@ -3,15 +3,10 @@
 use Illuminate\Support\Facades\Route;
 #BackEnd
 use App\Http\Controllers\backend\BackendController;
-<<<<<<< HEAD
 use App\Http\Controllers\backend\TicketManager\SellingRequest;
 
 
 #FrontEnd
-=======
-
-#Frontend Import
->>>>>>> e43bae5dc828b5138c407584ca52a763609f1079
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\frontend\AllEventController;
 use App\Http\Controllers\frontend\ConcertController;
