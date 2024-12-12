@@ -11,29 +11,36 @@
     <!-- End Dashboard Nav -->
 
     <!-- Ticket Management Nav -->
-        <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-grid"></i>
-          <span>Ticket Management</span>
-        </a>
-      </li>
+         <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#ticket-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-ticket-perforated"></i></i><span>Ticket Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="ticket-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="<?php echo e(route('sellingRequest')); ?>">
+                    <i class="bi bi-circle"></i><span>Incoming Ticket Selling Request</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="components-accordion.html">
+                    <i class="bi bi-circle"></i><span>Manage Tickets</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="components-accordion.html">
+                    <i class="bi bi-circle"></i><span>Manage Promo Code</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
     <!-- End Ticket Management Nav -->
-
-    <!-- Support Center Nav -->
-        <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-grid"></i>
-          <span>Support Center</span>
-        </a>
-      </li>
-    <!-- End Support Center Nav -->
 
     <!-- User Management Nav -->
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-menu-button-wide"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            <a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-people"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="components-alerts.html">
                     <i class="bi bi-circle"></i><span>User Role</span>
@@ -48,11 +55,25 @@
         </li>
     <!-- End User Management Nav -->
 
-
-
-     
-
+    <!-- Support Center Nav -->
+      <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#support-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-telephone"></i></i><span>Support Center</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="support-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="components-alerts.html">
+                    <i class="bi bi-circle"></i><span>Support Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="components-accordion.html">
+                    <i class="bi bi-circle"></i><span>On-going Support</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <!-- End Support Center Nav -->
     </ul>
-
   </aside>
 <?php /**PATH C:\wamp64\www\Laravel\ticket-booking-system\resources\views/backend/layout/components/sidebar.blade.php ENDPATH**/ ?>
