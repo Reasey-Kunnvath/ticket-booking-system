@@ -27,9 +27,9 @@
 
                         <a href="<?php echo e(url('/help-center')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Help-Center') ? 'active' : ''); ?>">Help Center</a>
 
-                        <a href="" class="nav-item nav-link align-items-center" >Cart <i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                        <a href="<?php echo e(url('/cart-checkout')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Cart-Checkout') ? 'active' : ''); ?>" >Cart <i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
                     </div>
-                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex" >Sell Your Tickets</a>
+                    <a href="<?php echo e(url('/sell-your-ticket')); ?>" class="btn btn-primary px-3 d-none d-lg-flex" >Sell Your Tickets</a>
 
                 </div>
 
