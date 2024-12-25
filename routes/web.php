@@ -14,6 +14,8 @@ use App\Http\Controllers\frontend\ConferenceController;
 use App\Http\Controllers\frontend\SportController;
 use App\Http\Controllers\frontend\AboutController;
 use App\Http\Controllers\frontend\HelpController;
+use App\Http\Controllers\frontend\CartController;
+use App\Http\Controllers\frontend\SellYourTicketController;
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
@@ -43,6 +45,17 @@ Route::controller(AboutController::class)->group(function(){
 Route::controller(HelpController::class)->group(function(){
     Route::get('/help-center','HelpCenterIndex')->name('Help-Center');
 });
+
+Route::controller(CartController::class)->group(function(){
+    Route::get('/cart-checkout','CartIndex')->name('Cart-Checkout');
+});
+
+Route::controller(SellYourTicketController::class)->group(function(){
+    Route::get('/sell-your-ticket','SellYourTicketIndex')->name('Sell-Your-Ticket');
+});
+
+
+
 
 
 # For Backend
