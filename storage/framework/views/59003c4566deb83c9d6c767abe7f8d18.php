@@ -7,17 +7,17 @@
                     <div class="card card-style1 border-0">
                         <div class="card-body p-4 p-md-5 p-xl-6">
                             <h1>Open Support Tickets</h1>
-                            <form class="w-100">
-                                <div class="mb-3">
-                                  <label for="message" class="form-label">Ticket #14571</label>
-                                  <textarea id="message" rows="10" class="form-control" placeholder="Tell us your problem..." style="resize: none;"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                            <form>
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Your message</label>
+                                    <textarea id="message" rows="10" class="form-control" placeholder="Leave a comment..." style="resize: none;"></textarea>
+                                </div><br>
+                                <button type="submit btn-primary" class="btn btn-primary">Submit</button>
                               </form>
                         </div>
                     </div>
                 </div>
-                <hr>
+
                 <div class="card card-style1 border-0">
                     <div class="card-body p-4 p-md-5 p-xl-6">
                         <div class="text-center mb-auto mb-lg-6">
