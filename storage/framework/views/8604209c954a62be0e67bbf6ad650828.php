@@ -1,5 +1,6 @@
-<?php $__env->startSection('title','Concerts'); ?>
+<?php $__env->startSection('title','Most Popular'); ?>
 <?php $__env->startSection('content'); ?>
+
         <!-- Search Start -->
         <div class="container-fluid bg-secondary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
             <div class="container">
@@ -55,7 +56,7 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="heading">
-                    <h2>Concerts</h2>
+                    <h2>Most Popular</h2>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -231,6 +232,7 @@
         </div>
         <!-- Property List End -->
 
+
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('frontend.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\ST15\wamp\www\Ticket Booking System\ticket-booking-system\resources\views/frontend/event/concert.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('frontend.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\ST15\wamp\www\Ticket Booking System\ticket-booking-system\resources\views/frontend/event/mostpopular.blade.php ENDPATH**/ ?>

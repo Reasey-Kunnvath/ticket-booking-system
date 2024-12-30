@@ -17,6 +17,8 @@
                         <div class="nav-item dropdown">
                             <a href="<?php echo e(url('/all-event')); ?>" class="nav-link dropdown-toggle <?php echo e(request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : ''); ?>" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
+                                <a href="<?php echo e(url('/upcoming-event')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Upcoming-Events') ? 'active' : ''); ?>" >Upcoming</a>
+                                <a href="<?php echo e(url('/most-popular-event')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Most-Popular-Events') ? 'active' : ''); ?>">Most Popular</a>
                                 <a href="<?php echo e(url('/all-event')); ?>" class="dropdown-item <?php echo e(request()->routeIs('All-Events') ? 'active' : ''); ?>">All Events</a>
                                 <a href="<?php echo e(url('/concert')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Concert') ? 'active' : ''); ?>">Concerts</a>
                                 <a href="<?php echo e(url('/conference')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Conference') ? 'active' : ''); ?>">Conferences</a>

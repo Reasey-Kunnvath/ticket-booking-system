@@ -1,5 +1,7 @@
-<?php $__env->startSection('title','Concerts'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('frontend.layout.master')
+@section('title','Upcoming Event')
+@section('content')
+
         <!-- Search Start -->
         <div class="container-fluid bg-secondary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
             <div class="container">
@@ -55,13 +57,13 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="heading">
-                    <h2>Concerts</h2>
+                    <h2>Upcoming</h2>
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-01.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-01.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$25</em></span>
                       </div>
@@ -87,7 +89,7 @@
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-02.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-02.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$45</em></span>
                       </div>
@@ -113,7 +115,7 @@
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-03.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-03.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$65</em></span>
                       </div>
@@ -139,7 +141,7 @@
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-04.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-04.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$20</em></span>
                       </div>
@@ -165,7 +167,7 @@
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-05.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-05.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$30</em></span>
                       </div>
@@ -192,7 +194,7 @@
                 <div class="col-lg-4">
                   <div class="ticket-item">
                     <div class="thumb">
-                      <img src=<?php echo e(asset("frontend/assets/images/ticket-06.jpg")); ?> alt="" />
+                      <img src={{asset("frontend/assets/images/ticket-06.jpg")}} alt="" />
                       <div class="price">
                         <span>1 ticket<br />from <em>$40</em></span>
                       </div>
@@ -231,6 +233,4 @@
         </div>
         <!-- Property List End -->
 
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('frontend.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\ST15\wamp\www\Ticket Booking System\ticket-booking-system\resources\views/frontend/event/concert.blade.php ENDPATH**/ ?>
+@endsection

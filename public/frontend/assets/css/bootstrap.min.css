@@ -2263,9 +2263,9 @@ progress {
 .form-control:focus {
     color: #666565;
     background-color: #fff;
-    border-color: #80dcc7;
+    border-color: #c580dc;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(0, 185, 142, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(145, 0, 185, 0.25);
 }
 
 .form-control::-webkit-date-and-time-value {
@@ -3087,7 +3087,7 @@ textarea.form-control.is-invalid {
 .btn-check:focus + .btn,
 .btn:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(0, 185, 142, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(65, 0, 185, 0.25);
 }
 
 .btn:disabled,
@@ -3719,8 +3719,8 @@ fieldset:disabled .btn {
 .btn-outline-light.active,
 .btn-outline-light.dropdown-toggle.show {
     color: #000;
-    background-color: #effdf5;
-    border-color: #effdf5;
+    background-color: #8c54fd;
+    border-color: #8c54fd;
 }
 
 .btn-check:checked + .btn-outline-light:focus,
@@ -3728,7 +3728,7 @@ fieldset:disabled .btn {
 .btn-outline-light:active:focus,
 .btn-outline-light.active:focus,
 .btn-outline-light.dropdown-toggle.show:focus {
-    box-shadow: 0 0 0 0.25rem rgba(239, 253, 245, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(253, 239, 250, 0.5);
 }
 
 .btn-outline-light:disabled,
@@ -3750,7 +3750,7 @@ fieldset:disabled .btn {
 
 .btn-check:focus + .btn-outline-dark,
 .btn-outline-dark:focus {
-    box-shadow: 0 0 0 0.25rem rgba(14, 46, 80, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(53, 14, 80, 0.5);
 }
 
 .btn-check:checked + .btn-outline-dark,
@@ -3759,8 +3759,8 @@ fieldset:disabled .btn {
 .btn-outline-dark.active,
 .btn-outline-dark.dropdown-toggle.show {
     color: #fff;
-    background-color: #0e2e50;
-    border-color: #0e2e50;
+    background-color: #8c54fd;
+    border-color: #8c54fd;
 }
 
 .btn-check:checked + .btn-outline-dark:focus,
@@ -3768,7 +3768,7 @@ fieldset:disabled .btn {
 .btn-outline-dark:active:focus,
 .btn-outline-dark.active:focus,
 .btn-outline-dark.dropdown-toggle.show:focus {
-    box-shadow: 0 0 0 0.25rem rgba(14, 46, 80, 0.5);
+    box-shadow: 0 0 0 0.25rem rgba(230, 0, 255, 0.5);
 }
 
 .btn-outline-dark:disabled,
@@ -3789,7 +3789,7 @@ fieldset:disabled .btn {
 
 .btn-link:disabled,
 .btn-link.disabled {
-    color: #6c757d;
+    color: #8c54fd;
 }
 
 .btn-lg,

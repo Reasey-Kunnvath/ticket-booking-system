@@ -28,6 +28,12 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href=<?php echo e(asset("frontend/assets/css/bootstrap.min.css")); ?> rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href=<?php echo e(asset("frontend/assets/css/font-awesome.css")); ?> />
+
+    <link rel="stylesheet" type="text/css" href=<?php echo e(asset("frontend/assets/css/owl-carousel.css")); ?> />
+
+    <link rel="stylesheet" href=<?php echo e(asset("frontend/assets/css/tooplate-artxibition.css")); ?> />
+
     <!-- Template Stylesheet -->
     <link href=<?php echo e(asset("frontend/assets/css/style.css")); ?> rel="stylesheet">
 </head>
