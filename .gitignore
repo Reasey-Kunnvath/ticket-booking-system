@@ -24,3 +24,6 @@ Homestead.json
 vendor
 
 app/Http/Controllers/*
+
+database/database.sqlite
+storage/logs/laravel.log
