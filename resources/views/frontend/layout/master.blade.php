@@ -28,6 +28,12 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href={{asset("frontend/assets/css/bootstrap.min.css")}} rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href={{asset("frontend/assets/css/font-awesome.css")}} />
+
+    <link rel="stylesheet" type="text/css" href={{asset("frontend/assets/css/owl-carousel.css")}} />
+
+    <link rel="stylesheet" href={{asset("frontend/assets/css/tooplate-artxibition.css")}} />
+
     <!-- Template Stylesheet -->
     <link href={{asset("frontend/assets/css/style.css")}} rel="stylesheet">
 </head>

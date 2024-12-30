@@ -7,15 +7,20 @@ use App\Http\Controllers\backend\TicketManager\SellingRequest;
 
 
 #FrontEnd
-use App\Http\Controllers\frontend\FrontendController;
-use App\Http\Controllers\frontend\AllEventController;
-use App\Http\Controllers\frontend\ConcertController;
-use App\Http\Controllers\frontend\ConferenceController;
-use App\Http\Controllers\frontend\SportController;
-use App\Http\Controllers\frontend\AboutController;
-use App\Http\Controllers\frontend\HelpController;
-use App\Http\Controllers\frontend\CartController;
-use App\Http\Controllers\frontend\SellYourTicketController;
+use App\Http\Controllers\frontend\{
+    FrontendController,
+    AllEventController,
+    ConcertController,
+    ConferenceController,
+    SportController,
+    AboutController,
+    HelpController,
+    CartController,
+    EventDetailController,
+    MostPopularController,
+    SellYourTicketController,
+    UpcomingController
+};
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
@@ -54,7 +59,17 @@ Route::controller(SellYourTicketController::class)->group(function(){
     Route::get('/sell-your-ticket','SellYourTicketIndex')->name('Sell-Your-Ticket');
 });
 
+Route::controller(UpcomingController::class)->group(function(){
+    Route::get('/upcoming-event','UpcomingIndex')->name('Upcoming-Events');
+});
 
+Route::controller(MostPopularController::class)->group(function(){
+    Route::get('/most-popular-event','MostPopularIndex')->name('Most-Popular-Events');
+});
+
+Route::controller(EventDetailController::class)->group(function(){
+    Route::get('/event-detail','EventDetailIndex')->name('Event-Detail');
+});
 
 
 

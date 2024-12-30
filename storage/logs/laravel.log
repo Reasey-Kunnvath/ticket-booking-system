@@ -2679,11 +2679,11 @@ Did you mean one of these?
 #50 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #51 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
 #52 {main}
-"} 
+"}
 [2024-12-06 17:29:28] local.ERROR: Cannot declare class App\Http\Controllers\backendcontoller, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Http\\Controllers\\backendcontoller, because the name is already in use at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\app\\Http\\Controllers\\backend\\backendcontoller.php:7)
 [stacktrace]
 #0 {main}
-"} 
+"}
 [2024-12-06 17:40:56] local.ERROR: syntax error, unexpected identifier "Route" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected identifier \"Route\" at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\routes\\web.php:15)
 [stacktrace]
 #0 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(513): Illuminate\\Routing\\RouteFileRegistrar->register()
@@ -2714,7 +2714,7 @@ Did you mean one of these?
 #25 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1205): Illuminate\\Foundation\\Console\\Kernel->handle()
 #26 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #27 {main}
-"} 
+"}
 <<<<<<< HEAD
 [2024-12-11 12:12:58] local.ERROR: View [backend.dashbarod.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.dashbarod.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
@@ -2770,7 +2770,7 @@ Did you mean one of these?
 #49 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #50 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #51 {main}
-"} 
+"}
 [2024-12-11 12:15:04] local.ERROR: View [backend.dashboard.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.dashboard.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('backend.dashboa...', Array)
@@ -2825,7 +2825,7 @@ Did you mean one of these?
 #49 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #50 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #51 {main}
-"} 
+"}
 [2024-12-11 12:16:07] local.ERROR: View [backend.dashboard.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.dashboard.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('backend.dashboa...', Array)
@@ -2880,7 +2880,7 @@ Did you mean one of these?
 #49 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #50 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #51 {main}
-"} 
+"}
 [2024-12-11 12:16:26] local.ERROR: View [backend.backIndex.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.backIndex.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('backend.backInd...', Array)
@@ -2935,7 +2935,7 @@ Did you mean one of these?
 #49 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #50 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #51 {main}
-"} 
+"}
 [2024-12-11 12:16:29] local.ERROR: View [backend.backIndex.] not found. {"exception":"[object] (InvalidArgumentException(code: 0): View [backend.backIndex.] not found. at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php:139)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('backend.backInd...', Array)
@@ -3006,7 +3006,7 @@ Did you mean one of these?
 #10 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #11 {main}
 >>>>>>> 7735c6cbe2163cccf7161c1bea328af57e933b3e
-"} 
+"}
 <<<<<<< HEAD
 [2024-12-12 12:19:59] local.ERROR: Undefined constant "sellingRequest" (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Undefined constant \"sellingRequest\" (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\storage\\framework\\views\\d601aff80dec93a910bd5146a71e72b8.php:20)
 [stacktrace]
@@ -3277,7 +3277,7 @@ Did you mean one of these?
 #69 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #70 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #71 {main}
-"} 
+"}
 [2024-12-12 12:20:18] local.ERROR: Undefined constant "sellingRequest" (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Undefined constant \"sellingRequest\" (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\storage\\framework\\views\\d601aff80dec93a910bd5146a71e72b8.php:20)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(60): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Illuminate\\View\\ViewException), 1)
@@ -3547,7 +3547,7 @@ Did you mean one of these?
 #69 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #70 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #71 {main}
-"} 
+"}
 [2024-12-12 12:20:21] local.ERROR: Undefined constant "sellingRequest" (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Undefined constant \"sellingRequest\" (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\storage\\framework\\views\\d601aff80dec93a910bd5146a71e72b8.php:20)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(60): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Illuminate\\View\\ViewException), 1)
@@ -3817,7 +3817,7 @@ Did you mean one of these?
 #69 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #70 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #71 {main}
-"} 
+"}
 [2024-12-12 12:20:22] local.ERROR: Undefined constant "sellingRequest" (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) (View: C:\wamp64\www\Laravel\ticket-booking-system\resources\views\backend\layout\components\sidebar.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Undefined constant \"sellingRequest\" (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) (View: C:\\wamp64\\www\\Laravel\\ticket-booking-system\\resources\\views\\backend\\layout\\components\\sidebar.blade.php) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\storage\\framework\\views\\d601aff80dec93a910bd5146a71e72b8.php:20)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(60): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Illuminate\\View\\ViewException), 1)
@@ -4087,7 +4087,7 @@ Did you mean one of these?
 #69 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #70 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #71 {main}
-"} 
+"}
 [2024-12-12 12:21:02] local.ERROR: Call to undefined method App\Http\Controllers\backend\BackendController::sellingRequest() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\backend\\BackendController::sellingRequest() at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\backend\\BackendController), 'sellingRequest')
@@ -4137,7 +4137,7 @@ Did you mean one of these?
 #44 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #45 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #46 {main}
-"} 
+"}
 [2024-12-12 12:21:12] local.ERROR: Call to undefined method App\Http\Controllers\backend\BackendController::sellingRequest() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\backend\\BackendController::sellingRequest() at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\backend\\BackendController), 'sellingRequest')
@@ -4187,7 +4187,7 @@ Did you mean one of these?
 #44 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #45 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #46 {main}
-"} 
+"}
 [2024-12-12 12:22:12] local.ERROR: Call to undefined method App\Http\Controllers\backend\BackendController::sellingRequest() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\backend\\BackendController::sellingRequest() at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\backend\\BackendController), 'sellingRequest')
@@ -4237,7 +4237,7 @@ Did you mean one of these?
 #44 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #45 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #46 {main}
-"} 
+"}
 [2024-12-12 12:23:05] local.ERROR: Call to undefined method App\Http\Controllers\backend\BackendController::sellingRequest() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\backend\\BackendController::sellingRequest() at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\backend\\BackendController), 'sellingRequest')
@@ -4287,7 +4287,7 @@ Did you mean one of these?
 #44 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #45 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #46 {main}
-"} 
+"}
 [2024-12-12 12:27:32] local.ERROR: Too many arguments to "make:controller" command, expected arguments "name". {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments to \"make:controller\" command, expected arguments \"name\". at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php:199)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php(92): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('SellingRequest')
@@ -4302,7 +4302,7 @@ Did you mean one of these?
 #9 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1205): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #10 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #11 {main}
-"} 
+"}
 =======
 [2024-12-12 11:57:36] local.ERROR: The "--view" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--view\" option does not exist. at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php:226)
 [stacktrace]
@@ -4319,7 +4319,7 @@ Did you mean one of these?
 #10 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1205): Illuminate\\Foundation\\Console\\Kernel->handle()
 #11 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #12 {main}
-"} 
+"}
 [2024-12-12 11:57:52] local.ERROR: The "--view" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--view\" option does not exist. at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php:226)
 [stacktrace]
 #0 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\symfony\\console\\Input\\ArgvInput.php(155): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption()
@@ -4335,7 +4335,7 @@ Did you mean one of these?
 #10 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1205): Illuminate\\Foundation\\Console\\Kernel->handle()
 #11 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #12 {main}
-"} 
+"}
 [2024-12-12 12:04:46] local.ERROR: Call to undefined method App\Http\Controllers\frontend\AboutController::AboutIndex() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\frontend\\AboutController::AboutIndex() at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
 #0 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(265): Illuminate\\Routing\\ControllerDispatcher->dispatch()
@@ -4385,7 +4385,7 @@ Did you mean one of these?
 #44 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #45 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
 #46 {main}
-"} 
+"}
 >>>>>>> e43bae5dc828b5138c407584ca52a763609f1079
 [2024-12-25 18:25:17] local.ERROR: Call to undefined method App\Http\Controllers\frontend\CartController::SellYourTicketIndex() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\frontend\\CartController::SellYourTicketIndex() at D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php:46)
 [stacktrace]
@@ -4436,7 +4436,7 @@ Did you mean one of these?
 #44 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest()
 #45 D:\\ST15\\wamp\\www\\Ticket Booking System\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('...')
 #46 {main}
-"} 
+"}
 [2024-12-25 18:50:01] local.ERROR: Database file at path [C:\wamp64\www\Laravel\ticket-booking-system\database\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from "sessions" where "id" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [C:\\wamp64\\www\\Laravel\\ticket-booking-system\\database\\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from \"sessions\" where \"id\" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
@@ -4553,7 +4553,7 @@ Did you mean one of these?
 #56 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #57 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #58 {main}
-"} 
+"}
 [2024-12-25 18:50:10] local.ERROR: Database file at path [C:\wamp64\www\Laravel\ticket-booking-system\database\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from "sessions" where "id" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [C:\\wamp64\\www\\Laravel\\ticket-booking-system\\database\\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from \"sessions\" where \"id\" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
@@ -4670,7 +4670,7 @@ Did you mean one of these?
 #56 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #57 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #58 {main}
-"} 
+"}
 [2024-12-25 18:50:12] local.ERROR: Database file at path [C:\wamp64\www\Laravel\ticket-booking-system\database\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from "sessions" where "id" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [C:\\wamp64\\www\\Laravel\\ticket-booking-system\\database\\database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: select * from \"sessions\" where \"id\" = wiMTSmvQOvrIazTkyfQZ6CULBdGasLTDsO90kN4Y limit 1) at C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
@@ -4787,4 +4787,4 @@ Did you mean one of these?
 #56 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\public\\index.php(17): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
 #57 C:\\wamp64\\www\\Laravel\\ticket-booking-system\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\wamp64\\\\www\\\\L...')
 #58 {main}
-"} 
+"}
