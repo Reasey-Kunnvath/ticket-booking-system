@@ -8,6 +8,9 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <!-- SweetAlert -->
+
+
     <!-- Favicon -->
     <link href={{asset("frontend/assets/img/favicon.ico")}} rel="icon">
     <!-- Font Awesome -->

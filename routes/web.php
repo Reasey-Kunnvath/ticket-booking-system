@@ -19,7 +19,8 @@ use App\Http\Controllers\frontend\{
     EventDetailController,
     MostPopularController,
     SellYourTicketController,
-    UpcomingController
+    UpcomingController,
+    UserProfileController
 };
 
 # For Frontend
@@ -69,6 +70,11 @@ Route::controller(MostPopularController::class)->group(function(){
 
 Route::controller(EventDetailController::class)->group(function(){
     Route::get('/event-detail','EventDetailIndex')->name('Event-Detail');
+});
+
+# Frontend - User Profile
+Route::controller(UserProfileController::class)->group(function(){
+    Route::get('/user-profile','UserProfileIndex')->name('User-Profile');
 });
 
 

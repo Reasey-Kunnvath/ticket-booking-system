@@ -8,6 +8,9 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <!-- SweetAlert -->
+
+
     <!-- Favicon -->
     <link href=<?php echo e(asset("frontend/assets/img/favicon.ico")); ?> rel="icon">
     <!-- Font Awesome -->
