@@ -17,6 +17,8 @@
                         <div class="nav-item dropdown">
                             <a href="{{url('/all-event')}}" class="nav-link dropdown-toggle {{ request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : '' }}" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
+                                <a href="{{url('/upcoming-event')}}" class="dropdown-item {{ request()->routeIs('Upcoming-Events') ? 'active' : '' }}" >Upcoming</a>
+                                <a href="{{url('/most-popular-event')}}" class="dropdown-item {{ request()->routeIs('Most-Popular-Events') ? 'active' : '' }}">Most Popular</a>
                                 <a href="{{url('/all-event')}}" class="dropdown-item {{ request()->routeIs('All-Events') ? 'active' : '' }}">All Events</a>
                                 <a href="{{url('/concert')}}" class="dropdown-item {{ request()->routeIs('Concert') ? 'active' : '' }}">Concerts</a>
                                 <a href="{{url('/conference')}}" class="dropdown-item {{ request()->routeIs('Conference') ? 'active' : '' }}">Conferences</a>
@@ -27,13 +29,19 @@
 
                         <a href="{{url('/help-center')}}" class="nav-item nav-link {{ request()->routeIs('Help-Center') ? 'active' : '' }}">Help Center</a>
 
-                        <a href="{{url('/cart-checkout')}}" class="nav-item nav-link {{ request()->routeIs('Cart-Checkout') ? 'active' : '' }}" >Cart <i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                        <a href="{{url('/cart-checkout')}}"
+                        class="nav-item nav-link {{ request()->routeIs('Cart-Checkout') ? 'active' : '' }}">
+                            Cart
+                            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                            <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
+                        </a>
+
                     </div>
                     <a href="{{url('/sell-your-ticket')}}" class="btn btn-primary px-3 d-none d-lg-flex" >Sell Your Tickets</a>
 
                 </div>
 
-                <a href="#" class="nav-item nav-link d-flex align-items-center">
+                <a href="{{url('/user-profile')}}" class="nav-item nav-link d-flex align-items-center">
                     <div class="p-2 me-2">
                         <img class="img-fluid" src={{asset("frontend/assets/img/userprofile.png")}} alt="Icon" style="width: 50px; height: 50px;">
                     </div>
