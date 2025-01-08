@@ -10,4 +10,7 @@ class SellingRequest extends Controller
     public function sellingRequest(){
         return view('backend.ticketMng.sellingRequest');
     }
+    public function requestDetail(){
+        return view('backend.ticketMng.requestDetail');
+    }
 }

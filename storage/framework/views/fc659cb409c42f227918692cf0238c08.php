@@ -1,6 +1,5 @@
-@extends('backend.layout.masterPage')
-@section('title', 'Manage Ticket')
-@section('content')
+<?php $__env->startSection('title', 'Manage Ticket'); ?>
+<?php $__env->startSection('content'); ?>
     <h1>Manage Ticket</h1>
     <div class="section contact ">
         <div class="row gy-4">
@@ -41,11 +40,11 @@
                                 </div>
                                 <div class="info-box col-lg-2 " >
                                     <div class="d-flex flex-column">
-                                        <a href="{{ route('manageTicketViewDetail') }}" type="button"
+                                        <a href="<?php echo e(route('manageTicketViewDetail')); ?>" type="button"
                                             class="btn btn-warning mb-3">View Detail</a>
                                       <div>
                                           <!-- Disabled Backdrop Modal-->
-                                             <a href="{{route('manageTicketEdit')}}" type="button" class="btn btn-success" >Edit Event</a>
+                                             <a href="<?php echo e(route('manageTicketEdit')); ?>" type="button" class="btn btn-success" >Edit Event</a>
                                         <div class="modal fade" id="Approve" tabindex="-1"
                                             data-bs-backdrop="false">
                                             <div class="modal-dialog">
@@ -135,7 +134,7 @@
                                 </div>
                                 <div class="info-box col-lg-2 " >
                                     <div class="d-flex flex-column">
-                                        <a href="{{ route('manageTicketViewDetail') }}" type="button"
+                                        <a href="<?php echo e(route('manageTicketViewDetail')); ?>" type="button"
                                             class="btn btn-warning mb-3">View Detail</a>
                                       <div>
                                           <!-- Disabled Backdrop Modal-->
@@ -201,4 +200,6 @@
             </div>
         </div>
 
-    @endsection
+    <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('backend.layout.masterPage', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\Laravel\ticket-booking-system\resources\views/backend/ticketMng/manageTicket.blade.php ENDPATH**/ ?>
