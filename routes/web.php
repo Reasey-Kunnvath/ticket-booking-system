@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 #BackEnd
 use App\Http\Controllers\backend\BackendController;
+use App\Http\Controllers\backend\TicketManager\ManagePromoteCode;
 use App\Http\Controllers\backend\TicketManager\SellingRequest;
-
-
+use App\Http\Controllers\backend\TicketManager\ManageTicketDetail;
 #FrontEnd
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\frontend\AllEventController;
@@ -16,6 +16,7 @@ use App\Http\Controllers\frontend\AboutController;
 use App\Http\Controllers\frontend\HelpController;
 use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\SellYourTicketController;
+use Illuminate\Database\Capsule\Manager;
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
@@ -63,6 +64,15 @@ Route::get('/admin', [BackendController::class, 'backendindex'])->name('admin');
 Route::get('/dashboard', [BackendController::class, 'dashboard'])->name('dashboard');
 
 #ticketManage
+#selellingRequest
 Route::get('/sellingRequest', [SellingRequest::class, 'sellingRequest'])->name('sellingRequest');
+Route::get('/requestDetail', [SellingRequest::class, 'requestDetail'])->name('requestDetail');
 
+#ManageTicket
+Route::get('/managerticket', [ManageTicketDetail::class, 'managerticket'])->name('managerticket');
+Route::get('/manageTicketViewDetail', [ManageTicketDetail::class, 'manageTicketViewDetail'])->name('manageTicketViewDetail');
+Route::get('/manageTicketEdit', [ManageTicketDetail::class, 'manageTicketEdit'])->name('manageTicketEdit');
+
+#ManagePromoteCode
+Route::get('/manageProCodeDetail', [ManagePromoteCode::class, 'manageProCodeDetail'])->name('manageProCodeDetail');
 
