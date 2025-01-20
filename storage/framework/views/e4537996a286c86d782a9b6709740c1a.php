@@ -22,12 +22,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordion.html">
+                    <a href="<?php echo e(route('managerticket')); ?>">
                     <i class="bi bi-circle"></i><span>Manage Tickets</span>
                     </a>
                 </li>
                  <li>
-                    <a href="components-accordion.html">
+                    <a href="<?php echo e(route('manageProCodeDetail')); ?>">
                     <i class="bi bi-circle"></i><span>Manage Promo Code</span>
                     </a>
                 </li>

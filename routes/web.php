@@ -23,12 +23,13 @@ use App\Http\Controllers\frontend\{
     MostPopularController,
     SellYourTicketController,
     UpcomingController,
-    UserProfileController
+    UserProfileController,
+    LoginController
 };
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
-    Route::get('/','frontendindex')->name('Home');
+    Route::get('/home','frontendindex')->name('Home');
 });
 
 Route::controller(AllEventController::class)->group(function(){
@@ -75,9 +76,12 @@ Route::controller(EventDetailController::class)->group(function(){
     Route::get('/event-detail','EventDetailIndex')->name('Event-Detail');
 });
 
-# Frontend - User Profile
 Route::controller(UserProfileController::class)->group(function(){
     Route::get('/user-profile','UserProfileIndex')->name('User-Profile');
+});
+
+Route::controller(LoginController::class)->group(function(){
+    Route::get('/login','LoginIndex')->name('login');
 });
 
 
