@@ -62,12 +62,12 @@
             </a>
             <ul id="support-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="components-alerts.html">
+                    <a href="<?php echo e(route('supportMessageDetail')); ?>">
                     <i class="bi bi-circle"></i><span>Support Message</span>
                     </a>
                 </li>
                 <li>
-                    <a href="components-accordion.html">
+                    <a href="<?php echo e(route('goinSupport')); ?>">
                     <i class="bi bi-circle"></i><span>On-going Support</span>
                     </a>
                 </li>

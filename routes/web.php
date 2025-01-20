@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 #BackEnd
 use App\Http\Controllers\backend\BackendController;
+use App\Http\Controllers\backend\supportMessage\SupportMessgaeController;
 use App\Http\Controllers\backend\TicketManager\ManagePromoteCode;
 use App\Http\Controllers\backend\TicketManager\SellingRequest;
 use App\Http\Controllers\backend\TicketManager\ManageTicketDetail;
@@ -98,4 +99,12 @@ Route::get('/manageTicketEdit', [ManageTicketDetail::class, 'manageTicketEdit'])
 
 #ManagePromoteCode
 Route::get('/manageProCodeDetail', [ManagePromoteCode::class, 'manageProCodeDetail'])->name('manageProCodeDetail');
+
+#SupportMessage
+Route::get('/supportMessageDetail', [SupportMessgaeController::class, 'supportMessageDetail'])->name('supportMessageDetail');
+Route::get('/supportMessageViewDetail', [SupportMessgaeController::class, 'supportMessageViewDetail'])->name('supportMessageViewDetail');
+Route::get('/goinSupport', [SupportMessgaeController::class, 'goinSupport'])->name('goinSupport');
+
+#Login
+Route::get('/login', [BackendController::class, 'login'])->name('login');
 
