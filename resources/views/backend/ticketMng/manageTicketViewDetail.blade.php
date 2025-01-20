@@ -100,8 +100,8 @@
                                     <div class="col-lg-3 col-md-4 label">Event Purpose:</div>
                                     <div class="col-lg-9 col-md-8">PARTY</div>
                                 </div>
-                                <button type="button" class="btn btn-success" >Edit Event</button>
-                                <button type="button" class="btn btn-danger " >Delete Event</button>
+                                <a href="{{route('manageTicketEdit')}}" type="button" class="btn btn-success" >Edit Event</a>
+                                <a href="{{route('managerticket')}}" type="button" class="btn btn-danger " >Delete Event</a>
                             </div>
                     </div>
                 </div>

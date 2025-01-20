@@ -10,7 +10,7 @@
                             <form>
                                 <div class="form-group">
                                     <label for="message" class="form-label">Your message</label>
-                                    <textarea id="message" rows="10" class="form-control" placeholder="Leave a comment..." style="resize: none;"></textarea>
+                                    <textarea id="message" rows="10" class="form-control" placeholder="Tell us about your problem..." style="resize: none;"></textarea>
                                 </div><br>
                                 <button type="submit btn-primary" class="btn btn-primary">Submit</button>
                               </form>

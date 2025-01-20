@@ -8,67 +8,63 @@
           <h1 class="font-weight-bold h3">Shopping Cart</h1>
           <h2 class="font-weight-bold h3">2 Items</h2>
         </div>
-        <div class="row py-3 border-top border-light">
-          <div class="col-md-4 col-12">
-            <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse" class="img-fluid d-none d-md-block" />
-            <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse" class="img-fluid d-md-none" />
-          </div>
-          <div class="col-md-8 d-flex flex-column justify-content-center">
-            <div class="d-flex justify-content-between">
-              <p class="h5 font-weight-bold mb-0">Luxe card holder</p>
-              <select class="form-control form-control-sm w-auto" aria-label="Select quantity">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
+        
+        <div class="row mb-4 d-flex justify-content-between align-items-center">
+            <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src="<?php echo e(asset('frontend/assets/images/ticket-details.jpg')); ?>"
+                class="img-fluid rounded-3"
+                style="object-fit: cover; width: 100%; height: 100px;"
+                alt="EVENT ABC">
+
             </div>
-            <p class="text-muted small pt-1">Height: 10 inches</p>
-            <p class="w-100 text-muted small pt-1">Composition: 100% calf leather</p>
-            <div class="d-flex justify-content-between pt-1">
-              <div class="d-flex">
-                <p class="text-primary small text-decoration-underline ml-3 cursor-pointer">
-                  <a href="#" class="font-weight-bold text-primary text-decoration-underline text-sm">Add to Favorites</a>
-                </p>
-                &nbsp;&nbsp;&nbsp;
-                <p class="text-danger small text-decoration-underline ml-3 cursor-pointer">
-                  <a href="#" class="font-weight-bold text-danger text-decoration-underline text-sm">Remove</a>
-                </p>
-              </div>
-              <p class="h5 font-weight-bold mb-0">1,000$</p>
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <h6 class="mb-0">EVENT ABC</h6>
+              <h6 class="text-muted">VIP SEAT</h6>
             </div>
-          </div>
+            Quantity
+            <div class="col-md-3 col-lg-3 col-xl-2 d-flex align-self-center">
+
+              <input id="form1" min="0" name="quantity" value="1" type="number"
+                class="form-control form-control-sm" />
+
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <h6 class="mb-0">Price*QTY</h6>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+              <a href="#!" class="text-danger"><i class="fas fa-times"></i></a>
+            </div>
         </div>
 
-        <div class="row py-3 border-top border-light">
-          <div class="col-md-4 col-12">
-            <img src="https://i.ibb.co/6gzWwSq/Rectangle-20-1.png" alt="Black Leather Purse" class="img-fluid d-none d-md-block" />
-            <img src="https://i.ibb.co/TTnzMTf/Rectangle-21.png" alt="Black Leather Purse" class="img-fluid d-md-none" />
-          </div>
-          <div class="col-md-8 d-flex flex-column justify-content-center">
-            <div class="d-flex justify-content-between">
-              <p class="h5 font-weight-bold mb-0">Luxe card holder</p>
-              <select class="form-control form-control-sm w-auto" aria-label="Select quantity">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
+        <div class="row mb-4 d-flex justify-content-between align-items-center">
+            <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src="<?php echo e(asset('frontend/assets/images/ticket-details.jpg')); ?>"
+                class="img-fluid rounded-3"
+                style="object-fit: cover; width: 100%; height: 100px;"
+                alt="EVENT ABC">
+
             </div>
-            <p class="text-muted small pt-1">Height: 10 inches</p>
-            <p class="w-100 text-muted small pt-1">Composition: 100% calf leather</p>
-            <div class="d-flex justify-content-between pt-1">
-              <div class="d-flex">
-                <p class="text-primary small text-decoration-underline ml-3 cursor-pointer">
-                    <a href="#" class="font-weight-bold text-primary text-decoration-underline text-sm">Add to Favorites</a>
-                  </p>
-                  &nbsp;&nbsp;&nbsp;
-                  <p class="text-danger small text-decoration-underline ml-3 cursor-pointer">
-                    <a href="#" class="font-weight-bold text-danger text-decoration-underline text-sm">Remove</a>
-                  </p>
-              </div>
-              <p class="h5 font-weight-bold mb-0">1,000$</p>
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <h6 class="mb-0">EVENT ABC</h6>
+              <h6 class="text-muted">VIP SEAT</h6>
             </div>
-          </div>
+            Quantity
+            <div class="col-md-3 col-lg-3 col-xl-2 d-flex align-self-center">
+
+              <input id="form1" min="0" name="quantity" value="1" type="number"
+                class="form-control form-control-sm" />
+
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <h6 class="mb-0">Price*QTY</h6>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+              <a href="#!" class="text-danger"><i class="fas fa-times"></i></a>
+            </div>
         </div>
+
+
+
         <div class="d-flex">
             <a href="<?php echo e(url('/all-event')); ?>" class="fs-5 font-weight-bold text-primary text-sm mt-5"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;Browse More Events</a>
         </div>
