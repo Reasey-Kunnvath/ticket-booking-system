@@ -96,11 +96,33 @@
       color: #fff !important;
     }
     .light-style .account-settings-links .list-group-item.active {
-      color: #4e5155 !important;
+      color: #8c54fd !important;
     }
     .light-style .account-settings-links .list-group-item {
       padding: 0.85rem 1.5rem;
       border-color: rgba(24, 28, 33, 0.03) !important;
+    }
+
+        /* Customize Cancel Button */
+    .custom-cancel-btn {
+        background-color: #f44336; /* Red */
+        color: #fff;
+        border: none;
+    }
+    .custom-cancel-btn:hover {
+        background-color: #8b1515; /* Darker Red */
+        color: #fff;
+    }
+
+    /* Customize Submit Button */
+    .custom-submit-btn {
+        background-color: #8c54fd ; /* Green */
+        color: #fff;
+        border: none;
+    }
+    .custom-submit-btn:hover {
+        background-color: #3f1b87  ; /* Darker Green */
+        color: #fff;
     }
 </style>
 
@@ -113,10 +135,10 @@
                     <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#account-general-info">
                         <i class="fa fa-user me-2"></i> Your Information
                     </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#">
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#your-order">
                         <i class="fa fa-shopping-cart me-2"></i> Your Orders
                     </a>
-                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#">
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#your-coupon">
                         <i class="fa fa-tags me-2"></i> Your Vouchers/Coupons
                     </a>
                     <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#account-change-password">
@@ -127,7 +149,7 @@
                     </a>
                 </div>
                 <div class="list-group list-group-flush account-settings-links">
-                    <a class="list-group-item text-danger" href="#">
+                    <a class="list-group-item text-danger" href="{{url('/login')}}">
                         <i class="fa fa-sign-out-alt me-2"></i> Log Out
                     </a>
                 </div>
@@ -136,6 +158,17 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="account-general-info">
                         <!-- Account General Section -->
+                        <div class="row mt-3 ms-1 me-3">
+                            <div class="col-8">
+                                <h2>Your Profile</h2>
+                                <small class="mb-3">Manage your profile information</small>
+                            </div>
+                            <div class="text-end col-4">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
+
                         <div class="card-body d-flex align-items-center">
                             <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="d-block ui-w-80" />
                             <div class="ms-4">
@@ -147,6 +180,7 @@
                                 <button type="button" class="btn btn-default">Reset</button>
                                 <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
                             </div>
+
                         </div>
                         <hr class="border-light m-0" />
                         <div class="card-body">
@@ -205,8 +239,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-pane fade" id="your-order">
+                        <div class="m-3">
+                            <h2>Orders</h2>
+                            <small class="mb-3">All your order history are listed here</small>
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center" style="margin: 2rem;">
+                            <img src="{{ asset("frontend/assets/img/image.png") }}" alt="" style="max-width: 50%; height: auto;" />
+                            <p class="mt-3"><h4><small>You don't have any order yet</small></h4></p>
+                            <h5><small><a href="#"><u>Shop for ticket</u></a></small></h5>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="your-coupon">
+                        <div class="m-3">
+                            <h2>Coupons</h2>
+                            <small class="mb-3">All your eligible coupons are listed here</small>
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center" style="margin: 2rem;">
+
+                            <img src="{{ asset("frontend/assets/img/image.png") }}" alt="" style="max-width: 50%; height: auto;" />
+                            <p class="mt-3"><h4><small>You don't have any Coupons yet</small></h4></p>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="account-change-password">
+                        <div class="row mt-3 ms-1 me-3">
+                            <div class="col-8">
+                                <h2>Your Account Crediential</h2>
+                                <small class="mb-3">You can change your password here</small>
+                            </div>
+                            <div class="text-end col-4">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
+                            </div>
+                        </div>
                         <div class="card-body pb-2">
+
                             <div class="mb-3">
                                 <label class="form-label">Current password</label>
                                 <input type="password" class="form-control" />
@@ -223,11 +290,14 @@
                     </div>
                     <div class="tab-pane fade" id="billing-information">
                         <div class="card-body pb-2">
-                            <h6 class="mb-4">Billing Settings</h6>
+                            <div class="mb-3">
+                                <h2>Billing Information</h2>
+                                <small class="mb-3">All your Billing Information are listed here</small>
+                            </div>
                             <div class="mb-3">
                                 <label class="form-label">Payment Method</label>
                                 <div class="small text-muted mb-2">You have not added a payment method.</div>
-                                <button class="btn btn-info" type="button">Add Payment Method</button>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#creditCardModal">Add Payment Method</button>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Payment History</label>
@@ -239,17 +309,151 @@
                         <hr class="border-light m-0" />
                     </div>
 
+                    <!-- Modal Structure -->
+                    <div class="modal fade" id="creditCardModal" tabindex="-1" aria-labelledby="creditCardModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="creditCardModalLabel">Credit Card Information</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form>
+                                    <div class="modal-body">
+                                            <!-- Cardholder Name -->
+                                            <div class="mb-3">
+                                                <label for="cardHolderName" class="form-label">Cardholder Name</label>
+                                                <input type="text" class="form-control" id="cardHolderName" placeholder="Enter name as on card" required>
+                                            </div>
+
+                                            <!-- Card Number -->
+                                            <div class="mb-3">
+                                                <label for="cardNumber" class="form-label">Card Number</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                                                    <span class="input-group-text" id="cardType" class="text-primary"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row g-3">
+                                                <!-- Expiry Date -->
+                                                <div class="col-md-6">
+                                                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                                                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                                </div>
+
+                                                <!-- CVV -->
+                                                <div class="col-md-6">
+                                                    <label for="cvv" class="form-label">CVV</label>
+                                                    <input type="password" class="form-control" id="cvv" placeholder="XXX" maxlength="3" required>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn custom-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn custom-submit-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Add additional tabs as necessary -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="text-end mt-3">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-default">Cancel</button>
-    </div>
+
 </div>
+
+    <script type="text/javascript">
+        document.getElementById("expiryDate").addEventListener("input", function (event) {
+            const input = event.target;
+            let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
+
+            // Format as MM/YY
+            if (value.length >= 3) {
+                value = value.substring(0, 2) + "/" + value.substring(2, 4);
+            }
+
+            input.value = value;
+        });
+
+        document.getElementById("expiryDate").addEventListener("blur", function (event) {
+            const input = event.target;
+            const value = input.value;
+
+            // Validate the format MM/YY
+            const regex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM must be 01-12
+            if (!regex.test(value)) {
+                // alert("Please enter a valid expiry date in MM/YY format.");
+                input.focus();
+            }
+        });
+
+
+
+        const cardNumberInput = document.getElementById('cardNumber');
+        const cardTypeSpan = document.getElementById('cardType');
+
+        cardNumberInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 '); // Add spaces every 4 digits
+            e.target.value = value;
+        });
+        cardNumberInput.addEventListener('blur', function (e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+
+        });
+
+        cardNumberInput.addEventListener('input', function() {
+            const cardNumber = this.value.replace(/ /g, '');
+
+            if (cardNumber.length > 0) {
+            const cardType = getCardType(cardNumber);
+            cardTypeSpan.innerHTML = cardType ? getCardTypeIcon(cardType) : '';
+            } else {
+            cardTypeSpan.innerHTML = '';
+            }
+        });
+
+        function getCardType(cardNumber) {
+            const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
+            const mastercardRegex = /^5[1-5][0-9]{14}$/;
+            const amexRegex = /^3[47][0-9]{13}$/;
+            const discoverRegex = /^6011[0-9]{12}$/;
+
+            if (visaRegex.test(cardNumber)) {
+            return 'Visa';
+            } else if (mastercardRegex.test(cardNumber)) {
+            return 'Mastercard';
+            } else if (amexRegex.test(cardNumber)) {
+            return 'American Express';
+            } else if (discoverRegex.test(cardNumber)) {
+            return 'Discover';
+            } else {
+            return null;
+            }
+        }
+
+        function getCardTypeIcon(cardType) {
+            switch (cardType) {
+            case 'Visa':
+                return `<img src='{{asset("frontend/assets/img/visa.svg")}}' width="30" height="30" />`;
+            case 'Mastercard':
+                return `<img src='{{asset("frontend/assets/img/mastercard.svg")}}' width="30" height="30" />`;
+            case 'American Express':
+                return `<img src='{{asset("frontend/assets/img/amex.svg")}}' width="30" height="30" />`;
+            case 'Discover':
+                return `<img src='{{asset("frontend/assets/img/discover.svg")}}' width="30" height="30" />`;
+            default:
+                return '';
+            }
+        }
+
+
+    </script>
+
 
 
   <!-- Scripts -->
@@ -260,6 +464,5 @@
 ></script>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 
-<script type="text/javascript"></script>
 
 @endsection

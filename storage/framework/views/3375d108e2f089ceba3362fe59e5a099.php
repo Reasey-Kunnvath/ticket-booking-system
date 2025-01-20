@@ -39,6 +39,7 @@
 
     <!-- Template Stylesheet -->
     <link href=<?php echo e(asset("frontend/assets/css/style.css")); ?> rel="stylesheet">
+
 </head>
 
 <body>
