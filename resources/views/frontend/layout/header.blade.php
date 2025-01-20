@@ -13,7 +13,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="{{url('/')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
+                        <a href="{{url('/home')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
                         <div class="nav-item dropdown">
                             <a href="{{url('/all-event')}}" class="nav-link dropdown-toggle {{ request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : '' }}" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -43,7 +43,7 @@
 
                 <a href="{{url('/user-profile')}}" class="nav-item nav-link d-flex align-items-center">
                     <div class="p-2 me-2">
-                        <img class="img-fluid" src={{asset("frontend/assets/img/userprofile.png")}} alt="Icon" style="width: 50px; height: 50px;">
+                        <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Icon" style="width: 50px; height: 50px; border-radius: 50%;">
                     </div>
                 </a>
 
