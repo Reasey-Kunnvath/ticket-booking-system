@@ -212,7 +212,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="{{route('login')}}">
+              <a class="dropdown-item d-flex align-items-center" href="{{route('backendlogin')}}">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
