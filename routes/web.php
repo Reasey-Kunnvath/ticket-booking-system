@@ -88,7 +88,7 @@ Route::controller(LoginController::class)->group(function(){
 
 
 # For Backend
-Route::get('/admin', [BackendController::class, 'backendindex'])->name('admin');
+// Route::get('/admin', [BackendController::class, 'backendindex'])->name('admin');
 Route::get('/dashboard', [BackendController::class, 'dashboard'])->name('dashboard');
 
 #ticketManage
@@ -110,5 +110,5 @@ Route::get('/supportMessageViewDetail', [SupportMessgaeController::class, 'suppo
 Route::get('/goinSupport', [SupportMessgaeController::class, 'goinSupport'])->name('goinSupport');
 
 #Login
-Route::get('/login', [BackendController::class, 'login'])->name('login');
+Route::get('/backendlogin', [BackendController::class, 'backendlogin'])->name('backendlogin');
 

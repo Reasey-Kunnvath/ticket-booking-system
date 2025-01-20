@@ -15,7 +15,7 @@ class BackendController extends Controller
     {
         return view('backend.dashboard');
     }
-    public function login()
+    public function backendlogin()
     {
         return view('backend.login');
     }
