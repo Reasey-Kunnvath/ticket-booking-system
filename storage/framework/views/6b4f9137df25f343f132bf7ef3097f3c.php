@@ -337,7 +337,7 @@
                                                 <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="<?php echo e(url('/home')); ?>" class="btn mt-4">submit</a>
+                                            <a href="<?php echo e(url('/')); ?>" class="btn mt-4">submit</a>
                                             <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
                                           </div>
                                       </div>
@@ -359,7 +359,7 @@
                                                 <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="<?php echo e(url('/home')); ?>" class="btn mt-4">submit</a>
+                                            <a href="<?php echo e(url('/')); ?>" class="btn mt-4">submit</a>
                                           </div>
                                       </div>
                                   </div>

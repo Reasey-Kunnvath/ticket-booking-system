@@ -2,7 +2,7 @@
 <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg shadow-lg bg-white navbar-light py-0 px-4">
-                <a href="" class="navbar-brand d-flex align-items-center text-center">
+                <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
                         <img class="img-fluid" src={{asset("frontend/assets/img/icon-deal.png")}} alt="Icon" style="width: 30px; height: 30px;">
                     </div>
@@ -13,7 +13,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="{{url('/home')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
+                        <a href="{{url('/')}}" class="nav-item nav-link {{ request()->routeIs('Home') ? 'active' : '' }}">Home</a>
                         <div class="nav-item dropdown">
                             <a href="{{url('/all-event')}}" class="nav-link dropdown-toggle {{ request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : '' }}" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -50,3 +50,4 @@
             </nav>
         </div>
 <!-- Navbar End -->
+
