@@ -2,7 +2,7 @@
 <!-- Navbar Start -->
         <div class="container-fluid nav-bar bg-transparent">
             <nav class="navbar navbar-expand-lg shadow-lg bg-white navbar-light py-0 px-4">
-                <a href="" class="navbar-brand d-flex align-items-center text-center">
+                <a href="<?php echo e(url('/')); ?>" class="navbar-brand d-flex align-items-center text-center">
                     <div class="icon p-2 me-2">
                         <img class="img-fluid" src=<?php echo e(asset("frontend/assets/img/icon-deal.png")); ?> alt="Icon" style="width: 30px; height: 30px;">
                     </div>
@@ -13,7 +13,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="<?php echo e(url('/home')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Home') ? 'active' : ''); ?>">Home</a>
+                        <a href="<?php echo e(url('/')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Home') ? 'active' : ''); ?>">Home</a>
                         <div class="nav-item dropdown">
                             <a href="<?php echo e(url('/all-event')); ?>" class="nav-link dropdown-toggle <?php echo e(request()->routeIs('All-Events') || request()->routeIs('Concert') ? 'active' : ''); ?>" data-bs-toggle="dropdown">Events</a>
                             <div class="dropdown-menu rounded-0 m-0">
@@ -41,11 +41,27 @@
 
                 </div>
 
-                <a href="<?php echo e(url('/user-profile')); ?>" class="nav-item nav-link d-flex align-items-center">
-                    <div class="p-2 me-2">
-                        <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                    </div>
-                </a>
+                <?php if(session('role') == "admin"): ?>
+                    <a href="<?php echo e(url('/dashboard')); ?>" class="nav-item nav-link d-flex align-items-center">
+                        <div class="p-2 me-2">
+                            Dashboard
+                        </div>
+                    </a>
+                <?php elseif(session('role') == "user"): ?>
+                    <a href="<?php echo e(url('/user-profile')); ?>" class="nav-item nav-link d-flex align-items-center">
+                        <div class="p-2 me-2">
+                            <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                        </div>
+                    </a>
+                <?php else: ?>
+                    <a href="<?php echo e(url('/login')); ?>" class="nav-item nav-link">
+                        <div class="p-2 me-2">
+                            Login
+                        </div>
+                    </a>
+                <?php endif; ?>
+
+
 
             </nav>
         </div>

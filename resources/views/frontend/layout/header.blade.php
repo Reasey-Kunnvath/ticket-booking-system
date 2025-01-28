@@ -41,11 +41,27 @@
 
                 </div>
 
-                <a href="{{url('/user-profile')}}" class="nav-item nav-link d-flex align-items-center">
-                    <div class="p-2 me-2">
-                        <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Icon" style="width: 50px; height: 50px; border-radius: 50%;">
-                    </div>
-                </a>
+                @if (session('role') == "admin")
+                    <a href="{{ url('/dashboard') }}" class="nav-item nav-link d-flex align-items-center">
+                        <div class="p-2 me-2">
+                            Dashboard
+                        </div>
+                    </a>
+                @elseif (session('role') == "user")
+                    <a href="{{ url('/user-profile') }}" class="nav-item nav-link d-flex align-items-center">
+                        <div class="p-2 me-2">
+                            <img class="img-fluid" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Icon" style="width: 50px; height: 50px; border-radius: 50%;">
+                        </div>
+                    </a>
+                @else
+                    <a href="{{ url('/login') }}" class="nav-item nav-link">
+                        <div class="p-2 me-2">
+                            Login
+                        </div>
+                    </a>
+                @endif
+
+
 
             </nav>
         </div>

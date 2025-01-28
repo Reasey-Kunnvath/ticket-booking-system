@@ -212,7 +212,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="<?php echo e(route('backendlogin')); ?>">
+              <a class="dropdown-item d-flex align-items-center" href="<?php echo e(route('login')); ?>">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
