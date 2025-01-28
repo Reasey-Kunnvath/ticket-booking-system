@@ -329,16 +329,20 @@
                                         <div class="section text-center">
                                             <h1 class="m-0 text-white" style="font-size: 5rem; font-weight: 700">OG</h1><br>
                                             <h4 class="mb-4 pb-3">Log In</h4>
-                                            <div class="form-group">
-                                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                                <i class="input-icon uil uil-at"></i>
-                                            </div>
-                                            <div class="form-group mt-2">
-                                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                                <i class="input-icon uil uil-lock-alt"></i>
-                                            </div>
-                                            <a href="{{url('/home')}}" class="btn mt-4">submit</a>
-                                            <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
+                                            <form id="formLogin" name="login_form" action="{{route('Home')}}" method="POST">
+                                                @method('GET')
+                                                @csrf
+                                                <div class="form-group">
+                                                    <input type="text" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <button type="submit" class="btn mt-4">submit</button>
+                                                <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
+                                            </form>
                                           </div>
                                       </div>
                                   </div>
@@ -359,7 +363,7 @@
                                                 <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="{{url('/home')}}" class="btn mt-4">submit</a>
+                                            <a href="{{url('/')}}" class="btn mt-4">submit</a>
                                           </div>
                                       </div>
                                   </div>

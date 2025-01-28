@@ -56,7 +56,7 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="heading">
-                    <h2>All Events</h2>
+                    <h1 class="p-3">All Events</h1>
                   </div>
                 </div>
                 <div class="col-lg-4">

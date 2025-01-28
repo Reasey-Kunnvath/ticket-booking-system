@@ -30,7 +30,7 @@ use App\Http\Controllers\frontend\{
 
 # For Frontend
 Route::controller(FrontendController::class)->group(function(){
-    Route::get('/home','frontendindex')->name('Home');
+    Route::get('/','frontendindex')->name('Home');
 });
 
 Route::controller(AllEventController::class)->group(function(){
@@ -111,4 +111,3 @@ Route::get('/goinSupport', [SupportMessgaeController::class, 'goinSupport'])->na
 
 #Login
 Route::get('/backendlogin', [BackendController::class, 'backendlogin'])->name('backendlogin');
-
