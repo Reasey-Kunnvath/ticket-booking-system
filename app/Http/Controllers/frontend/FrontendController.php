@@ -19,10 +19,5 @@ class FrontendController extends Controller
         }else{
             return back()->withErrors(['error' => 'Invalid role or user not found']);
         }
-
-
-
-
-
     }
 }
