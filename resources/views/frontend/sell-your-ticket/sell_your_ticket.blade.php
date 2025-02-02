@@ -82,19 +82,15 @@
 
                                     <div class="mb-3 row">
                                         <!-- Title -->
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <label for="eventTitle" class="form-label">Title <span style="color:red">*</span></label>
                                             <input type="text" class="form-control" id="eventTitle" placeholder="Enter event title" required>
-                                        </div>
-                                        <!-- Ticket Price -->
-                                        <div class="col-md-6">
-                                            <label for="ticketPrice" class="form-label">Ticket Price <span style="color:red">*</span></label>
-                                            <input type="number" class="form-control" id="ticketPrice" placeholder="Enter ticket price" required>
                                         </div>
                                     </div>
 
                                     <div class="mb-3 row">
                                         <!-- Subtitle -->
+
                                         <div class="col-md-6">
                                             <label for="organizationType" class="form-label">Event Category <span style="color:red">*</span></label>
                                             <select class="form-control" id="organizationType" required>
@@ -127,31 +123,34 @@
                                         </div>
                                     </div>
 
-
                                     <div class="mb-3 row">
-                                        <!-- Upload Image -->
-                                        <div class="col-md-6">
-                                            <label for="eventImage" class="form-label">Upload Your Event Image (JPG, JPEG, PNG)<span style="color:red">*</span></label>
 
+                                        <div class="col-md-6">
+                                            <label for="eventImage" class="form-label">
+                                                Upload Your Event Image (JPG, JPEG, PNG)<span style="color:red">*</span>
+                                            </label>
                                             <input
                                                 type="file"
                                                 class="form-control mt-2"
                                                 id="eventImage"
                                                 accept=".jpg, .jpeg, .png"
-                                                required>
+                                                required
+                                                onchange="previewImage(event)"
+                                            >
+                                                <br>
+                                                <label   label for="eventPurpose" class="form-label">Event Purpose <span style="color:red">*</span></label>
+                                                <textarea id="message" rows="10" class="form-control" placeholder="Write your event description" style="resize: none;"></textarea>
                                         </div>
                                         <div class="col-md-6 text-center">
                                             <label class="form-label">Preview</label>
-                                            <div id="nationalIdPreview" style="border: 1px dashed #ccc; padding: 10px; height: 500px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                                                <span class="text-muted">No image uploaded</span>
+                                            <div id="imagePreviewContainer" style="border: 1px dashed #ccc; padding: 10px; width: 540px; height: 364px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                                                <span class="text-muted" id="previewText">No image uploaded</span>
+                                                <img id="imagePreview" src="" alt="Image Preview" style="display: none; max-height: 100%; max-width: 100%;">
                                             </div>
                                         </div>
+                                        {{-- <div class="col-md-6">
 
-                                        <!-- Event Purpose -->
-                                        <div class="col-md-6">
-                                            <label for="eventPurpose" class="form-label">Event Purpose <span style="color:red">*</span></label>
-                                            <textarea id="message" rows="10" class="form-control" placeholder="Write your event description" style="resize: none;"></textarea>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <br><hr>
 
@@ -192,27 +191,25 @@
     </div>
 </div>
 <script>
+    function previewImage(event) {
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        const previewImage = document.getElementById('imagePreview');
+        const previewText = document.getElementById('previewText');
+        const file = event.target.files[0];
 
-        function previewNationalId() {
-            const input = document.getElementById('nationalId');
-            const preview = document.getElementById('nationalIdPreview');
-            preview.innerHTML = ''; // Clear existing content
-
-            const file = input.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const img = document.createElement('img');
-                    img.src = e.target.result;
-                    img.style.maxWidth = '100%';
-                    img.style.maxHeight = '100%';
-                    preview.appendChild(img);
-                };
-                reader.readAsDataURL(file);
-            } else {
-                preview.innerHTML = '<span class="text-muted">No image uploaded</span>';
-            }
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+                previewImage.style.display = "block";
+                previewText.style.display = "none";
+            };
+            reader.readAsDataURL(file);
+        } else {
+            previewImage.style.display = "none";
+            previewText.style.display = "block";
         }
+    }
 
         let ticketCount = 0;
 
