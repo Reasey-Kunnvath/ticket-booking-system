@@ -1,5 +1,7 @@
 @extends('backend.layout.masterPage')
 @section('title', 'Selling request')
+@section('ticket_show','show')
+@section('sell_active','active')
 @section('content')
     <h1>Sale Requestion</h1>
     <div class="section contact ">

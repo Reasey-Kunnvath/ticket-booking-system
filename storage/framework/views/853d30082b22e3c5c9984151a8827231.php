@@ -1,4 +1,6 @@
 <?php $__env->startSection('title', 'Promote Code'); ?>
+<?php $__env->startSection('ticket_show', 'show'); ?>
+<?php $__env->startSection('pro_active', 'active'); ?>
 <?php $__env->startSection('content'); ?>
     <ul class="list-inline ">
         <li class="list-inline-item col-sm-10">

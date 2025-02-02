@@ -1,4 +1,6 @@
 <?php $__env->startSection('title', 'Manage Ticket'); ?>
+<?php $__env->startSection('ticket_show', 'show'); ?>
+<?php $__env->startSection('mt_active', 'active'); ?>
 <?php $__env->startSection('content'); ?>
     <h1>Manage Ticket</h1>
     <div class="section contact ">

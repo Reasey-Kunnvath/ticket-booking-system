@@ -1,4 +1,6 @@
 <?php $__env->startSection('title', 'Support Message List'); ?>
+<?php $__env->startSection('support_show', 'show'); ?>
+<?php $__env->startSection('support_active', 'active'); ?>
 <?php $__env->startSection('content'); ?>
     <h1>Message List</h1>
     <div class="section contact ">

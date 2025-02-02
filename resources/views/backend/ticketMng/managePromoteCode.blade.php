@@ -1,5 +1,7 @@
 @extends('backend.layout.masterPage')
 @section('title', 'Promote Code')
+@section('ticket_show', 'show')
+@section('pro_active', 'active')
 @section('content')
     <ul class="list-inline ">
         <li class="list-inline-item col-sm-10">

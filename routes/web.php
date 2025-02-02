@@ -7,6 +7,10 @@ use App\Http\Controllers\backend\supportMessage\SupportMessgaeController;
 use App\Http\Controllers\backend\TicketManager\ManagePromoteCode;
 use App\Http\Controllers\backend\TicketManager\SellingRequest;
 use App\Http\Controllers\backend\TicketManager\ManageTicketDetail;
+use App\Http\Controllers\backend\UserManagerment\permissionController;
+use App\Http\Controllers\backend\UserManagerment\userController;
+use App\Http\Controllers\eventManage\eventController;
+use App\Http\Controllers\eventManage\venueController;
 #FrontEnd
 
 use Illuminate\Database\Capsule\Manager;
@@ -96,6 +100,11 @@ Route::get('/dashboard', [BackendController::class, 'dashboard'])->name('dashboa
 Route::get('/sellingRequest', [SellingRequest::class, 'sellingRequest'])->name('sellingRequest');
 Route::get('/requestDetail', [SellingRequest::class, 'requestDetail'])->name('requestDetail');
 
+#EeventManage
+Route::resource('event', eventController::class);
+Route::resource('venue', venueController::class);
+Route::resource('user', userController::class);
+Route::resource('roleAndpermission', permissionController::class);
 #ManageTicket
 Route::get('/managerticket', [ManageTicketDetail::class, 'managerticket'])->name('managerticket');
 Route::get('/manageTicketViewDetail', [ManageTicketDetail::class, 'manageTicketViewDetail'])->name('manageTicketViewDetail');

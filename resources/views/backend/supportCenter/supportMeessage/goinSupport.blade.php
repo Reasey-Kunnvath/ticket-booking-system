@@ -1,5 +1,7 @@
 @extends('backend.layout.masterPage')
 @section('title', 'On-going Support List')
+@section('support_show', 'show')
+@section('goin_active', 'active')
 @section('content')
     <h1>On-going Support List</h1>
     <div class="section contact ">
