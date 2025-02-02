@@ -25,20 +25,26 @@
                                 <a href="{{url('/sport')}}" class="dropdown-item {{ request()->routeIs('Sport') ? 'active' : '' }}">Sports</a>
                             </div>
                         </div>
-                        <a href="{{url('/about')}}" class="nav-item nav-link {{ request()->routeIs('About') ? 'active' : '' }}">About</a>
+                        {{-- <a href="{{url('/about')}}" class="nav-item nav-link {{ request()->routeIs('About') ? 'active' : '' }}">About</a> --}}
 
                         <a href="{{url('/help-center')}}" class="nav-item nav-link {{ request()->routeIs('Help-Center') ? 'active' : '' }}">Help Center</a>
-
-                        <a href="{{url('/cart-checkout')}}"
-                        class="nav-item nav-link {{ request()->routeIs('Cart-Checkout') ? 'active' : '' }}">
-                            Cart
-                            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                            <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
-                        </a>
-
+                        @if(session('role') == "admin" || session('role') == "user")
+                            <a href="{{url('/cart')}}"
+                            class="nav-item nav-link {{ request()->routeIs('Cart') ? 'active' : '' }}">
+                                Cart
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
+                            </a>
+                        @else
+                            <a href="{{url('/login')}}"
+                            class="nav-item nav-link {{ request()->routeIs('Cart') ? 'active' : '' }}">
+                                Cart
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
+                            </a>
+                        @endif
                     </div>
                     <a href="{{url('/sell-your-ticket')}}" class="btn btn-primary px-3 d-none d-lg-flex" >Sell Your Tickets</a>
-
                 </div>
 
                 @if (session('role') == "admin")
@@ -60,9 +66,6 @@
                         </div>
                     </a>
                 @endif
-
-
-
             </nav>
         </div>
 <!-- Navbar End -->

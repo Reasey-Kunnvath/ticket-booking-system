@@ -43,29 +43,7 @@
                                         <a href="<?php echo e(route('manageTicketViewDetail')); ?>" type="button"
                                             class="btn btn-warning mb-3">View Detail</a>
                                       <div>
-                                          <!-- Disabled Backdrop Modal-->
                                              <a href="<?php echo e(route('manageTicketEdit')); ?>" type="button" class="btn btn-success" >Edit Event</a>
-                                        <div class="modal fade" id="Approve" tabindex="-1"
-                                            data-bs-backdrop="false">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Warning</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Are you sure you want to Approve this request? This action cannot be undone
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-success"> Approve</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Disabled Backdrop Modal-->
                                         <!-- Disabled Backdrop Modal-->
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                             data-bs-target="#Reject">
@@ -81,12 +59,12 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        Are you sure you want to Reject this request? This action cannot be undone
+                                                        Are you sure you want to Delete this Event? This action cannot be undone
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-danger">Reject</button>
+                                                        <button type="button" class="btn btn-danger">Delete</button>
                                                     </div>
                                                 </div>
                                             </div>

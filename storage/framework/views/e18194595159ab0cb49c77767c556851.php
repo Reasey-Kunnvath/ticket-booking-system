@@ -6,15 +6,18 @@
                 <div class="col-md-6 p-5 mt-lg-5">
                     <h1 class="display-4 animated fadeIn mb-4">Find Your <span class="text-primary">One-Stop Shop</span> For Event Tickets</h1>
                     <p class="animated fadeIn mb-4 pb-2">Fast, Secure, and Convenient. Find Your Next Adventure!</p>
-                    <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">See Available Tickets</a>
+                    <a href="<?php echo e(route('All-Events')); ?>" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">See Available Tickets</a>
                 </div>
                 <div class="col-md-6 animated fadeIn">
                     <div class="owl-carousel header-carousel">
                         <div class="owl-carousel-item">
-                            <img class="img-750" src=<?php echo e(asset("frontend/assets/img/carousel-1.jpg")); ?> alt="">
+                            <img class="img-750" src=<?php echo e(asset("frontend/assets/images/ticket-details.jpg")); ?> alt="">
                         </div>
                         <div class="owl-carousel-item">
-                            <img class="img-750" src=<?php echo e(asset("frontend/assets/img/carousel-2.jpg")); ?> alt="">
+                            <img class="img-750" src=<?php echo e(asset("frontend/assets/images/about-image.jpg")); ?> alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-750" src=<?php echo e(asset("frontend/assets/images/venue-03.jpg")); ?> alt="">
                         </div>
                     </div>
                 </div>

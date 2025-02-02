@@ -10,6 +10,30 @@
       </li>
     <!-- End Dashboard Nav -->
 
+    <!-- Event Management Nav -->
+         <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-calendar3-event"></i></i><span>Event Management</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="event-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="#">
+                    <i class="bi bi-circle"></i><span>Event List</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="bi bi-circle"></i><span>Event Details</span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="#">
+                    <i class="bi bi-circle"></i><span>Venue Management</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <!-- End Event Management Nav -->
     <!-- Ticket Management Nav -->
          <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#ticket-nav" data-bs-toggle="collapse" href="#">
@@ -41,6 +65,11 @@
             <i class="bi bi-people"></i><span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                 <li>
+                    <a href="#">
+                    <i class="bi bi-circle"></i><span>User List</span>
+                    </a>
+                </li>
                 <li>
                     <a href="components-alerts.html">
                     <i class="bi bi-circle"></i><span>User Role</span>
