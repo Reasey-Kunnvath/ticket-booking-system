@@ -105,7 +105,7 @@
                         </li>
                       </ul>
                       <div class="main-dark-button">
-                        <a href="ticket-details.html">Purchase Tickets</a>
+                        <a href="<?php echo e(url('/event-detail')); ?>">Purchase Tickets</a>
                       </div>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
                         </li>
                       </ul>
                       <div class="main-dark-button">
-                        <a href="ticket-details.html">Purchase Tickets</a>
+                        <a href="<?php echo e(url('/event-detail')); ?>">Purchase Tickets</a>
                       </div>
                     </div>
                   </div>
@@ -157,7 +157,7 @@
                         </li>
                       </ul>
                       <div class="main-dark-button">
-                        <a href="ticket-details.html">Purchase Tickets</a>
+                        <a href="<?php echo e(url('/event-detail')); ?>">Purchase Tickets</a>
                       </div>
                     </div>
                   </div>
@@ -184,7 +184,7 @@
                         </li>
                       </ul>
                       <div class="main-dark-button">
-                        <a href="ticket-details.html">Purchase Tickets</a>
+                        <a href="<?php echo e(url('/event-detail')); ?>">Purchase Tickets</a>
                       </div>
                     </div>
                   </div>
@@ -210,7 +210,7 @@
                         </li>
                       </ul>
                       <div class="main-dark-button">
-                        <a href="ticket-details.html">Purchase Tickets</a>
+                        <a href="<?php echo e(url('/event-detail')); ?>">Purchase Tickets</a>
                       </div>
                     </div>
                   </div>

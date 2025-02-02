@@ -25,20 +25,26 @@
                                 <a href="<?php echo e(url('/sport')); ?>" class="dropdown-item <?php echo e(request()->routeIs('Sport') ? 'active' : ''); ?>">Sports</a>
                             </div>
                         </div>
-                        <a href="<?php echo e(url('/about')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('About') ? 'active' : ''); ?>">About</a>
+                        
 
                         <a href="<?php echo e(url('/help-center')); ?>" class="nav-item nav-link <?php echo e(request()->routeIs('Help-Center') ? 'active' : ''); ?>">Help Center</a>
-
-                        <a href="<?php echo e(url('/cart-checkout')); ?>"
-                        class="nav-item nav-link <?php echo e(request()->routeIs('Cart-Checkout') ? 'active' : ''); ?>">
-                            Cart
-                            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                            <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
-                        </a>
-
+                        <?php if(session('role') == "admin" || session('role') == "user"): ?>
+                            <a href="<?php echo e(url('/cart')); ?>"
+                            class="nav-item nav-link <?php echo e(request()->routeIs('Cart') ? 'active' : ''); ?>">
+                                Cart
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
+                            </a>
+                        <?php else: ?>
+                            <a href="<?php echo e(url('/login')); ?>"
+                            class="nav-item nav-link <?php echo e(request()->routeIs('Cart') ? 'active' : ''); ?>">
+                                Cart
+                                <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                                <span class="small-badge top-0 start-100 translate-middle badge ms-1 rounded-pill bg-danger">2</span>
+                            </a>
+                        <?php endif; ?>
                     </div>
                     <a href="<?php echo e(url('/sell-your-ticket')); ?>" class="btn btn-primary px-3 d-none d-lg-flex" >Sell Your Tickets</a>
-
                 </div>
 
                 <?php if(session('role') == "admin"): ?>
@@ -60,9 +66,6 @@
                         </div>
                     </a>
                 <?php endif; ?>
-
-
-
             </nav>
         </div>
 <!-- Navbar End -->
