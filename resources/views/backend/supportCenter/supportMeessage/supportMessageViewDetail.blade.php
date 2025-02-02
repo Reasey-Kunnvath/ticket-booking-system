@@ -1,5 +1,7 @@
 @extends('backend.layout.masterPage')
 @section('title', 'Support Message View Detail')
+@section('support_show', 'show')
+@section('goin_active', 'active')
 @section('content')
 <div class="col-lg-12">
           <div class="card">

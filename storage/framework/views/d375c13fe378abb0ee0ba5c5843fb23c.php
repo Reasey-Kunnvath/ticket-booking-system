@@ -1,4 +1,6 @@
 <?php $__env->startSection('title', 'Support Message View Detail'); ?>
+<?php $__env->startSection('support_show', 'show'); ?>
+<?php $__env->startSection('goin_active', 'active'); ?>
 <?php $__env->startSection('content'); ?>
 <div class="col-lg-12">
           <div class="card">

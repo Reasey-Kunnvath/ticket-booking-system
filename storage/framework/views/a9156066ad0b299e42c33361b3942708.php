@@ -1,4 +1,6 @@
 <?php $__env->startSection('title', 'Selling request'); ?>
+<?php $__env->startSection('ticket_show','show'); ?>
+<?php $__env->startSection('sell_active','active'); ?>
 <?php $__env->startSection('content'); ?>
     <h1>Sale Requestion</h1>
     <div class="section contact ">

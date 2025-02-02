@@ -1,5 +1,7 @@
 @extends('backend.layout.masterPage')
 @section('title', 'Manage Ticket')
+@section('ticket_show', 'show')
+@section('mt_active', 'active')
 @section('content')
     <h1>Manage Ticket</h1>
     <div class="section contact ">
