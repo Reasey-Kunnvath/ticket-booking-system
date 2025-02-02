@@ -58,7 +58,9 @@ Route::controller(HelpController::class)->group(function(){
 });
 
 Route::controller(CartController::class)->group(function(){
-    Route::get('/cart-checkout','CartIndex')->name('Cart-Checkout');
+    Route::get('/cart','CartIndex')->name('Cart');
+    Route::post('/paymentForm','checkout')->name('payment.form');
+    Route::get('/success','processPayment')->name('payment.success');
 });
 
 Route::controller(SellYourTicketController::class)->group(function(){
@@ -84,6 +86,8 @@ Route::controller(UserProfileController::class)->group(function(){
 Route::controller(LoginController::class)->group(function(){
     Route::get('/login','LoginIndex')->name('login');
 });
+
+
 
 
 

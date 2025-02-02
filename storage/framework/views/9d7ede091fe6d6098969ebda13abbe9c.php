@@ -164,118 +164,6 @@
     </div>
 </div>
 
-        <div class="modal fade" id="seatSelectionModal" tabindex="-1" role="dialog" aria-labelledby="seatSelectionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="seatSelectionModalLabel">Seat Selection</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="movie-container">
-                            <label>Pick a movie:</label>
-                            <select id="movie">
-                                <option value="10">Avengers: Endgame ($10)</option>
-                                <option value="12">Joker ($12)</option>
-                                <option value="8">Toy Story 4 ($8)</option>
-                                <option value="9">The Lion King ($9)</option>
-                            </select>
-                        </div>
-
-                        <ul class="showcase">
-                            <li>
-                                <div class="seat"></div>
-                                <small>N/A</small>
-                            </li>
-                            <li>
-                                <div class="seat selected"></div>
-                                <small>Selected</small>
-                            </li>
-                            <li>
-                                <div class="seat occupied"></div>
-                                <small>Occupied</small>
-                            </li>
-                        </ul>
-
-                        <div class="container">
-                            <div class="screen"></div>
-
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat occupied"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                            </div>
-                            <div class="row">
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat occupied"></div>
-                                <div class="seat"></div>
-                            </div>
-                        </div>
-
-                        <p class="text">
-                            You have selected <span id="count">0</span> seats for a price of $<span
-                                id="total">0</span>
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save Selection</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 <script>
@@ -284,7 +172,7 @@
 
         Swal.fire({
             title: "Item Added to Cart",
-            html: 'Go to <a href="<?php echo e(url('/cart-checkout')); ?>" style="font-weight:bold; color: #3085d6; text-decoration: underline;">Cart</a> to Checkout',
+            html: 'Go to <a href="<?php echo e(url('/cart')); ?>" style="font-weight:bold; color: #3085d6; text-decoration: underline;">Cart</a> to Checkout',
             icon: "success"
         });
     });

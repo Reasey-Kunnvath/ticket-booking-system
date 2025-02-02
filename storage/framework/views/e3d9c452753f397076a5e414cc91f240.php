@@ -124,6 +124,8 @@
         color: #fff;
     }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
 <div class="container light-style flex-grow-1 container-p-y mt-4">
     <h4 class="fw-bold py-3 mb-4">Account settings</h4>
@@ -169,7 +171,7 @@
                         </div>
 
                         <div class="card-body d-flex align-items-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="d-block ui-w-80" />
+                            <img src="<?php echo e(asset('frontend/assets/img/userprofile.png')); ?>" alt="" class="d-block ui-w-80" />
                             <div class="ms-4">
                                 <label class="btn btn-outline-primary">
                                     Upload new photo
@@ -287,16 +289,49 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="tab-pane fade" id="billing-information">
                         <div class="card-body pb-2">
                             <div class="mb-3">
                                 <h2>Billing Information</h2>
                                 <small class="mb-3">All your Billing Information are listed here</small>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Payment Method</label>
-                                <div class="small text-muted mb-2">You have not added a payment method.</div>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#creditCardModal">Add Payment Method</button>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Payment Method</label>
+                                    
+                                    <div id="cardList">
+                                        <div v-for="(card, index) in sharedState.card_list" :key="'card_list_' + index" class="card p-2 m-2">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="p-1 text-start">
+                                                            <div class="d-flex align-items-center">
+                                                                <img :src="card.cardIcon" width="30" height="30" alt="" />
+                                                                <h6 class="mb-0 ms-2">{{ card.cardType }} Ends in **{{ card.cardNumber.slice(-2) }}</h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6 text-end">
+                                                        <div class="p-1">
+                                                            <button class="btn btn-outline-danger btn-sm" @click="removeCard(index)">Remove</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="p-1 text-start">
+                                                            <div class="d-flex align-items-center">
+                                                                <span>Expiry Date: {{ card.expiryDate }}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#creditCardModal">Add Payment Method</button>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Payment History</label>
@@ -307,8 +342,8 @@
                         </div>
                         <hr class="border-light m-0" />
                     </div>
-
-                    <!-- Modal Structure -->
+                <div id="app">
+                    <!-- Add Modal Structure -->
                     <div class="modal fade" id="creditCardModal" tabindex="-1" aria-labelledby="creditCardModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -316,153 +351,232 @@
                                     <h5 class="modal-title" id="creditCardModalLabel">Credit Card Information</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form>
-                                    <div class="modal-body">
-                                            <!-- Cardholder Name -->
-                                            <div class="mb-3">
-                                                <label for="cardHolderName" class="form-label">Cardholder Name</label>
-                                                <input type="text" class="form-control" id="cardHolderName" placeholder="Enter name as on card" required>
-                                            </div>
 
-                                            <!-- Card Number -->
-                                            <div class="mb-3">
-                                                <label for="cardNumber" class="form-label">Card Number</label>
-                                                <div class="input-group">
-                                                    <input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
-                                                    <span class="input-group-text" id="cardType" class="text-primary"></span>
-                                                </div>
-                                            </div>
-
-                                            <div class="row g-3">
-                                                <!-- Expiry Date -->
-                                                <div class="col-md-6">
-                                                    <label for="expiryDate" class="form-label">Expiry Date</label>
-                                                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                    <form>
+                                        <div class="modal-body">
+                                                <!-- Cardholder Name -->
+                                                <div class="mb-3">
+                                                    <label for="cardHolderName" class="form-label">Cardholder Name</label>
+                                                    <input v-model="CardHolderName" type="text" class="form-control" id="cardHolderName" placeholder="Enter name as on card" required>
                                                 </div>
 
-                                                <!-- CVV -->
-                                                <div class="col-md-6">
-                                                    <label for="cvv" class="form-label">CVV</label>
-                                                    <input type="password" class="form-control" id="cvv" placeholder="XXX" maxlength="3" required>
+                                                <!-- Card Number -->
+                                                <div class="mb-3">
+                                                    <label for="cardNumber" class="form-label">Card Number</label>
+                                                    <div class="input-group">
+                                                        <input v-model="CardNumber" @input="formatCardNumber()" type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                                                        <span class="input-group-text text-primary" id="cardType">
+                                                            <img :src="cardTypeIcon" alt="" width="30" height="30">
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn custom-cancel-btn" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="button" class="btn custom-submit-btn">Save</button>
-                                    </div>
-                                </form>
+                                                <div class="row g-3">
+                                                    <!-- Expiry Date -->
+                                                    <div class="col-md-6">
+                                                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                                                        <input v-model="ExpiryDate" @input="formatExpiryDate()" type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                                    </div>
+
+                                                    <!-- CVV -->
+                                                    <div class="col-md-6">
+                                                        <label for="cvv" class="form-label">CVV</label>
+                                                        <input v-model="CVC" type="password" class="form-control" id="cvv" placeholder="XXX" maxlength="3" required>
+                                                    </div>
+                                                </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn custom-cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button @click.prevent="submitCard" class="btn custom-submit-btn">Save</button>
+                                        </div>
+                                    </form>
+
+
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <!-- Add additional tabs as necessary -->
                 </div>
             </div>
         </div>
     </div>
-
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script type="text/javascript">
+    // Shared state for both Vue instances
+    const sharedState = Vue.observable({
+        card_list: []
+    });
 
-    <script type="text/javascript">
-        document.getElementById("expiryDate").addEventListener("input", function (event) {
-            const input = event.target;
-            let value = input.value.replace(/\D/g, ""); // Remove non-digit characters
+    var app = new Vue({
+        el:'#app',
+        data: {
+            CardHolderName: null,
+            CardNumber: null,
+            CardType:  null,
+            ExpiryDate: null,
+            CVC: null,
+            cardTypeIcon: null,
+            baseImgUrl: '<?php echo e(asset("frontend/assets/img/")); ?>'
+        },
+        methods: {
+            formatExpiryDate() {
+                // Remove all non-digit characters
+                let value = this.ExpiryDate.replace(/\D/g, '');
 
-            // Format as MM/YY
-            if (value.length >= 3) {
-                value = value.substring(0, 2) + "/" + value.substring(2, 4);
-            }
+                // If there are more than 2 digits, insert a slash after the second digit
+                if (value.length > 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                }
 
-            input.value = value;
-        });
+                // Update the data property
+                this.ExpiryDate = value;
 
-        document.getElementById("expiryDate").addEventListener("blur", function (event) {
-            const input = event.target;
-            const value = input.value;
+            },
+                  // Formats the card number as XXXX XXXX XXXX XXXX
+            formatCardNumber() {
+                let number = this.CardNumber.replace(/\D/g, '');
+                let groups = number.match(/.{1,4}/g);
+                this.CardNumber = groups ? groups.join(' ') : '';
 
-            // Validate the format MM/YY
-            const regex = /^(0[1-9]|1[0-2])\/\d{2}$/; // MM must be 01-12
-            if (!regex.test(value)) {
-                // alert("Please enter a valid expiry date in MM/YY format.");
-                input.focus();
-            }
-        });
+                                // Remove spaces from the card number.
+                const cleanNumber = this.CardNumber.replace(/\s/g, '');
+                const type = this.getCardType(cleanNumber);
+                // Based on the type, return the corresponding image HTML.
+                if (type === 'Visa') {
+                    this.cardTypeIcon = this.baseImgUrl + '/visa.svg';
+                } else if (type === 'Mastercard') {
+                    this.cardTypeIcon = this.baseImgUrl + '/mastercard.svg';
+                } else if (type === 'American Express' || type === 'amex') {
+                    this.cardTypeIcon = this.baseImgUrl + '/amex.svg';
+                } else if (type === 'Discover') {
+                    this.cardTypeIcon = this.baseImgUrl + '/discover.svg';
+                } else {
+                // Return an empty string if no valid type is entered.
+                    return null;
+                }
+                this.cardType = type;
+            },
+            // Determine the card type based on the card number.
+            getCardType(cardNumber) {
+                const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
+                const mastercardRegex = /^5[1-5][0-9]{14}$/;
+                const amexRegex = /^3[47][0-9]{13}$/;
+                const discoverRegex = /^6011[0-9]{12}$/;
+
+                if (visaRegex.test(cardNumber)) {
+                return 'Visa';
+                } else if (mastercardRegex.test(cardNumber)) {
+                return 'Mastercard';
+                } else if (amexRegex.test(cardNumber)) {
+                return 'American Express';
+                } else if (discoverRegex.test(cardNumber)) {
+                return 'Discover';
+                } else {
+                return null;
+                }
+            },
+
+            submitCard() {
+                // Validate the fields
+                if (!this.CardHolderName || !this.CardNumber || !this.ExpiryDate || !this.CVC) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please fill in all the required fields!'
+                    });
+                    return;
+                }else if(!this.cardType){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'The Credit Card Information you entered is invalid'
+                    });
+                    return;
+                }
+
+                // Push card to the shared state
+                sharedState.card_list.push({
+                    cardHolder: this.CardHolderName,
+                    cardNumber: this.CardNumber,
+                    cardType: this.CardType,
+                    cardIcon: this.cardTypeIcon,
+                    expiryDate: this.ExpiryDate,
+                    cvc: this.CVC
+                });
+
+                  // Show success message
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Card Saved!',
+                    text: 'Your card has been successfully saved.',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+
+                // Clear the form fields
+                this.CardHolderName = null;
+                this.CardNumber = null;
+                this.CardType = '';
+                this.cardTypeIcon = null;
+                this.ExpiryDate = null;
+                this.CVC = null;
 
 
-
-        const cardNumberInput = document.getElementById('cardNumber');
-        const cardTypeSpan = document.getElementById('cardType');
-
-        cardNumberInput.addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-            value = value.replace(/(\d{4})(?=\d)/g, '$1 '); // Add spaces every 4 digits
-            e.target.value = value;
-        });
-        cardNumberInput.addEventListener('blur', function (e) {
-            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
-
-        });
-
-        cardNumberInput.addEventListener('input', function() {
-            const cardNumber = this.value.replace(/ /g, '');
-
-            if (cardNumber.length > 0) {
-            const cardType = getCardType(cardNumber);
-            cardTypeSpan.innerHTML = cardType ? getCardTypeIcon(cardType) : '';
-            } else {
-            cardTypeSpan.innerHTML = '';
-            }
-        });
-
-        function getCardType(cardNumber) {
-            const visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
-            const mastercardRegex = /^5[1-5][0-9]{14}$/;
-            const amexRegex = /^3[47][0-9]{13}$/;
-            const discoverRegex = /^6011[0-9]{12}$/;
-
-            if (visaRegex.test(cardNumber)) {
-            return 'Visa';
-            } else if (mastercardRegex.test(cardNumber)) {
-            return 'Mastercard';
-            } else if (amexRegex.test(cardNumber)) {
-            return 'American Express';
-            } else if (discoverRegex.test(cardNumber)) {
-            return 'Discover';
-            } else {
-            return null;
-            }
+            },
         }
+    })
 
-        function getCardTypeIcon(cardType) {
-            switch (cardType) {
-            case 'Visa':
-                return `<img src='<?php echo e(asset("frontend/assets/img/visa.svg")); ?>' width="30" height="30" />`;
-            case 'Mastercard':
-                return `<img src='<?php echo e(asset("frontend/assets/img/mastercard.svg")); ?>' width="30" height="30" />`;
-            case 'American Express':
-                return `<img src='<?php echo e(asset("frontend/assets/img/amex.svg")); ?>' width="30" height="30" />`;
-            case 'Discover':
-                return `<img src='<?php echo e(asset("frontend/assets/img/discover.svg")); ?>' width="30" height="30" />`;
-            default:
-                return '';
-            }
+
+    // Second Vue instance for card list management
+    var cardList = new Vue({
+        el: '#cardList',
+        data: {
+            sharedState,
+            tempcardHolder: null,
+            tempcardNum: null,
+            tempExp: null,
+            tempCvv: null,
+            var_index: null,
+        },
+        methods: {
+            removeCard(index) {
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                        this.sharedState.card_list.splice(index, 1);
+                    }
+                });
+
+            },
         }
+    });
 
-
-    </script>
-
+</script>
 
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script
   data-cfasync="false"
-  src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-></script>
+  src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
 
 <?php $__env->stopSection(); ?>
 
