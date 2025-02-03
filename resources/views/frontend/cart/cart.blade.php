@@ -41,10 +41,6 @@
                 </div>
             </div>
 
-
-
-
-
             <div class="d-flex">
                 <a href="{{url('/all-event')}}" class="fs-5 font-weight-bold text-primary text-sm mt-5"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;Browse More Events</a>
             </div>
@@ -67,13 +63,20 @@
                   </div>
                   <div class="py-4">
                     <label for="promo" class="font-weight-bold d-block mb-2 text-muted text-sm">Promo Code</label>
-                    <input type="text" id="promo" placeholder="Enter your code" class="form-control form-control-sm" />
+                    <input type="text" id="promo" v-model="enteredPromocode" @input="applyPromocode" placeholder="Enter your code" class="form-control form-control-sm" />
+                    <p v-if="promoError" class="text-danger mt-1">@{{ promoError }}</p>
+                    <p v-if="appliedPromocode" class="text-success mt-1">
+                      @{{ appliedPromocode.code }} applied! You saved @{{ appliedPromocode.discount }}%
+                    </p>
                   </div>
-                  <button class="btn btn-danger btn-sm w-100">Apply</button>
                   <div class="border-top mt-4 pt-4">
+                      <div v-if="appliedPromocode" class="d-flex justify-content-between py-3 text-muted small">
+                          <p class="h5 font-weight-bold mb-0">Discount @{{ appliedPromocode.discount }}%</p>
+                          <p class="h5 font-weight-bold mb-0">- @{{ formatCash(oldPrice * (appliedPromocode.discount / 100)) }}</p>
+                        </div>
                     <div class="d-flex font-weight-bold justify-content-between py-3 text-muted small">
-                      <p class="h5 font-weight-bold mb-0">Total</p>
-                      <p class="h5 font-weight-bold mb-0">@{{formatCash(orderTotal)}}</p>
+                      <p class="h5 font-weight-bold mb-0">Grand Total</p>
+                      <p class="h5 font-weight-bold mb-0">@{{ formatCash(orderTotal) }}</p>
                     </div>
                     <button type="submit" class="btn btn-primary btn-sm w-100">Checkout</button>
                   </div>
@@ -89,6 +92,11 @@
         var app = new Vue({
             el: '#app',
             data: {
+                promocodes: [
+                    { code: 'save10', discount: 10 },
+                    { code: 'chillguy', discount: 100 },
+                    { code: 'save50', discount: 50},
+                ],
                 items: [    {
                         eventTitle: 'Event ABC',
                         ticketType: 'VIP Seat',
@@ -102,13 +110,23 @@
                         qty: 1,
                     },
                 ],
+                oldPrice: null,
+                enteredPromocode: '',
+                appliedPromocode: null,
+                promoError: null,
             },
             computed: {
                 orderTotal() {
                     let total = 0;
                     for (const item of this.items) {
-                        total += item.ticketprice * item.qty;
+                        total += (item.ticketprice * item.qty);
+
                     }
+                    this.oldPrice = total
+                    if (this.appliedPromocode) {
+                        total -= (total * (this.appliedPromocode.discount / 100));
+                    }
+
                     return total;
                 },
             },
@@ -120,6 +138,18 @@
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                     }).format(value);
+                },
+                applyPromocode() {
+                    this.promoError = null; // Clear any previous errors
+
+                    const enteredCode = this.enteredPromocode.toLowerCase();
+                    this.appliedPromocode = this.promocodes.find(promo => promo.code === enteredCode);
+
+                    if (!this.appliedPromocode) {
+                    this.promoError = 'Invalid promocode.'; // Set the error message
+                    } else {
+                        console.log('Promocode applied:', this.appliedPromocode.code);
+                    }
                 },
             },
         })
