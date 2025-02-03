@@ -417,6 +417,7 @@
         data: {
             CardHolderName: null,
             CardNumber: null,
+            type: null,
             CardType:  null,
             ExpiryDate: null,
             CVC: null,
@@ -445,21 +446,24 @@
 
                                 // Remove spaces from the card number.
                 const cleanNumber = this.CardNumber.replace(/\s/g, '');
-                const type = this.getCardType(cleanNumber);
+                this.type = this.getCardType(cleanNumber);
                 // Based on the type, return the corresponding image HTML.
-                if (type === 'Visa') {
+                if (this.type === 'Visa') {
                     this.cardTypeIcon = this.baseImgUrl + '/visa.svg';
-                } else if (type === 'Mastercard') {
+                } else if (this.type === 'Mastercard') {
                     this.cardTypeIcon = this.baseImgUrl + '/mastercard.svg';
-                } else if (type === 'American Express' || type === 'amex') {
+                } else if (this.type === 'American Express' || this.type === 'amex') {
                     this.cardTypeIcon = this.baseImgUrl + '/amex.svg';
-                } else if (type === 'Discover') {
+                } else if (this.type === 'Discover') {
                     this.cardTypeIcon = this.baseImgUrl + '/discover.svg';
                 } else {
                 // Return an empty string if no valid type is entered.
+                    this.cardType = null;
+                    this.cardTypeIcon = null;
+                    this.type = null;
                     return null;
                 }
-                this.cardType = type;
+                this.cardType = this.type;
             },
             // Determine the card type based on the card number.
             getCardType(cardNumber) {
